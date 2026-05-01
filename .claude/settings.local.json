@@ -4,7 +4,11 @@
       "Bash(git add *)",
       "Bash(git commit -m 'Archive original website *)",
       "Bash(git tag *)",
-      "Bash(git branch *)"
+      "Bash(git branch *)",
+      "Bash(sort -k5 -rh)",
+      "Bash(command -v cwebp magick convert ffmpeg)",
+      "PowerShell(Get-Command magick, cwebp, ffmpeg -ErrorAction SilentlyContinue)",
+      "Bash(awk '{printf \"%-35s %s KB\\\\n\", $NF, int\\($5/1024\\)}')"
     ]
   }
 }

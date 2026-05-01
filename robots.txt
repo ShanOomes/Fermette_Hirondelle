@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://oomes.nl/picardie/sitemap.xml

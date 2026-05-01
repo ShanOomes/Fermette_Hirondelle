@@ -1,561 +1,1430 @@
 <!DOCTYPE html>
-<html>
+<html lang="nl">
 <head>
-<meta name="DESCRIPTION" content="Vakantiehuis Hirondelle, Picardie, Frankrijk">
-<meta name="KEYWORDS" content="vakantiehuis, Bouillancourt, Rue du Gue, fermette, Hirondelle, hirondelles, Frankrijk, vakantie, Picardie, Normandië, kust, krijtrotsen, huis, huisje, huren, huur, landelijk, romantisch, idyllisch, Abbeville, Crotoy, Valery sur Somme">
-<meta name="ROBOTS" content="INDEX, FOLLOW">
-<meta name="REVISIT-AFTER" content="3 DAYS">
-<title>Vakantiehuis Hirondelle</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="images/favicon-b-32x32.png" type="image/png">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vakantiehuis Hirondelle — Picardie, Frankrijk</title>
+  <meta name="description" content="Huur Vakantiehuis Hirondelle, een sfeervolle 4-persoons fermette uit ca. 1900 in Bouillancourt-Moyenneville, Picardie. Op 15 minuten van strand en krijtrotsen. Tuin, open haard, wifi.">
 
-<link rel="stylesheet" href="flickity.css" media="screen">
+  <link rel="canonical" href="https://oomes.nl/picardie/">
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-b-32x32.png">
+  <link rel="apple-touch-icon" href="images/favicon-b-32x32.png">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css" />
-<script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
+  <meta name="theme-color" content="#FAF7F2">
 
-<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+  <!-- Open Graph (Facebook, WhatsApp, LinkedIn, iMessage) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://oomes.nl/picardie/">
+  <meta property="og:title" content="Vakantiehuis Hirondelle — Picardie, Frankrijk">
+  <meta property="og:description" content="Sfeervolle fermette voor 4 personen in Bouillancourt-Moyenneville. Tuin, open haard, wifi, 15 min van het strand.">
+  <meta property="og:image" content="https://oomes.nl/picardie/images/web_front_image.webp">
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:site_name" content="Vakantiehuis Hirondelle">
 
-<link rel="stylesheet" href="css/styles.css">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Vakantiehuis Hirondelle — Picardie, Frankrijk">
+  <meta name="twitter:description" content="Sfeervolle fermette voor 4 personen in Bouillancourt. Tuin, open haard, wifi.">
+  <meta name="twitter:image" content="https://oomes.nl/picardie/images/web_front_image.webp">
 
+  <!-- Google Search Console verification -->
+  <meta name="google-site-verification" content="7_arO8E7tuiTYzDjfdNE6r9tsPD9MIWUlvpHEkAgQ1k">
+
+  <!-- Fonts: Cormorant Garamond (display) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 (icons) — non-blocking load -->
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous"></noscript>
+
+  <!-- Leaflet (map) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind theme config: design tokens from DESIGN_PLAN.md -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream:  '#FAF7F2',
+            ink:    '#2B2420',
+            muted:  '#6B5F58',
+            border: '#E8DFD6',
+            clay: {
+              100: '#F0E2DE',
+              300: '#D0B3AF',
+              500: '#B98C82',
+              700: '#A87567',
+              900: '#6E4A40',
+            },
+            sage: '#7A8B6F',
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans:  ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+          },
+          letterSpacing: {
+            'overline': '0.14em',
+          },
+        }
+      }
+    }
+  </script>
+
+  <!-- Base styles -->
+  <style type="text/tailwindcss">
+    @layer base {
+      html { scroll-behavior: smooth; }
+      body { @apply bg-cream text-ink font-sans antialiased; line-height: 1.6; }
+      h1, h2, h3, h4 { @apply font-serif font-medium text-ink; line-height: 1.2; }
+      a { @apply transition-colors duration-200; }
+      ::selection { @apply bg-clay-300 text-ink; }
+      @media (prefers-reduced-motion: reduce) {
+        * { animation: none !important; transition: none !important; }
+        html { scroll-behavior: auto; }
+      }
+    }
+    @keyframes tlRise {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @layer components {
+      .container-page { @apply max-w-[1100px] mx-auto px-6 md:px-8; }
+      .section { @apply py-16 md:py-24; }
+      .overline { @apply font-sans uppercase tracking-overline text-xs text-clay-900 font-semibold; }
+      .btn-primary { @apply inline-flex items-center justify-center gap-2 bg-ink text-cream font-sans font-medium px-6 py-3 rounded-md hover:bg-clay-900 transition-colors duration-200; }
+      .btn-secondary { @apply inline-flex items-center justify-center gap-2 bg-transparent text-ink font-sans font-medium px-6 py-3 rounded-md border border-ink hover:bg-ink hover:text-cream transition-colors duration-200; }
+      .nav-link { @apply font-sans text-sm text-ink hover:text-clay-700 transition-colors duration-200; }
+    }
+  </style>
+
+  <!-- Schema.org structured data: LodgingBusiness + AggregateRating + Reviews -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LodgingBusiness",
+    "@id": "https://oomes.nl/picardie/#lodging",
+    "name": "Vakantiehuis Hirondelle",
+    "description": "Sfeervolle 4-persoons fermette uit ca. 1900 in Bouillancourt-Moyenneville, Picardie. Op 15 minuten van strand en krijtrotsen.",
+    "url": "https://oomes.nl/picardie/",
+    "image": [
+      "https://oomes.nl/picardie/images/web_front_image.webp",
+      "https://oomes.nl/picardie/images/web_Living_room.webp",
+      "https://oomes.nl/picardie/images/web_Kitchen.webp",
+      "https://oomes.nl/picardie/images/web_Back_yard_1.webp"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bouillancourt-Moyenneville",
+      "addressRegion": "Hauts-de-France",
+      "addressCountry": "FR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 50.0517,
+      "longitude": 1.7083
+    },
+    "priceRange": "€495–€585 per week",
+    "numberOfRooms": 3,
+    "occupancy": {
+      "@type": "QuantitativeValue",
+      "maxValue": 4
+    },
+    "petsAllowed": false,
+    "smokingAllowed": false,
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "WiFi", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Open haard", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Tuin", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Terras", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Barbecue", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Parkeerplaats", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "TV (kabel en satelliet)", "value": true }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "8.3",
+      "bestRating": "10",
+      "worstRating": "1",
+      "ratingCount": "6"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "GJ de" },
+        "datePublished": "2023-07-01",
+        "reviewRating": { "@type": "Rating", "ratingValue": "8", "bestRating": "10" },
+        "reviewBody": "Prachtige natuur van velerlei aard: kust, velden met gewas, mooie dalen. Het kwam eerst wat 'vol' over qua inrichting, maar dat went snel. Het is verder comfortabel, van alles voorzien."
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Imkje" },
+        "datePublished": "2022-09-24",
+        "reviewRating": { "@type": "Rating", "ratingValue": "8", "bestRating": "10" },
+        "reviewBody": "Een rustig dorp met mooie zee en zand- en kiezelstranden in de buurt, ook mooie oude stadjes. Een comfortabel, echt Frans brocante huisje."
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Reinder" },
+        "datePublished": "2022-06-04",
+        "reviewRating": { "@type": "Rating", "ratingValue": "9", "bestRating": "10" },
+        "reviewBody": "Omgeving is erg rustig. Vanuit het huis mooie wandelingen gemaakt — een aanrader is Saint-Valery-sur-Somme om te fietsen langs kust en krijtrotsen. Het huisje is erg gezellig en karakteristiek ingericht."
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Nicolien" },
+        "datePublished": "2022-04-30",
+        "reviewRating": { "@type": "Rating", "ratingValue": "8", "bestRating": "10" },
+        "reviewBody": "In een lieflijke vallei, met op rijafstand diverse boeiende landschappen: wetlands, Baie de Somme, krijtrotskliffen. Een huisje met een sterke personal touch, heerlijk stukje tuin erbij, fijne haard en een vuurplaats in de tuin."
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Michiel" },
+        "datePublished": "2020-08-15",
+        "reviewRating": { "@type": "Rating", "ratingValue": "9", "bestRating": "10" },
+        "reviewBody": "In een klein, slaperig dorpje met veel bossen, akkers en weilanden. Fraai wandelen en fietsen door het heuvelachtige landschap! Heel fijn huisje met alle basics. Ruim genoeg voor een gezin van 4."
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Ronald" },
+        "datePublished": "2019-06-29",
+        "reviewRating": { "@type": "Rating", "ratingValue": "8", "bestRating": "10" },
+        "reviewBody": "Prachtige rustige en groene omgeving. Glooiend dus uitdagend om te fietsen en te lopen. Knus huis met gezellige tuin."
+      }
+    ]
+  }
+  </script>
 </head>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YX8VRG2F3G"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YX8VRG2F3G');
-</script>
-
 <body>
-<script src="flickity.pkgd.min.js"></script>
 
-<!-- Sidebar with image -->
-<nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%">
-  <div class="bgimg"></div>
-</nav>
+  <!-- ==========================================================
+       SECTION 2 — Sticky top navigation
+       Cream translucent bar, blur backdrop, logo + links + Boek nu
+       Mobile: hamburger → full-screen overlay
+  =========================================================== -->
+  <header
+    id="site-header"
+    class="fixed top-0 inset-x-0 z-40 bg-cream/80 backdrop-blur-md border-b border-border"
+  >
+    <div class="container-page flex items-center justify-between h-16 md:h-20">
 
-<!-- Hidden Sidebar (reveals when clicked on menu icon)-->
-<nav class="w3-sidebar w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
-  <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topright" style="padding:0 12px;">
-    <i class="fa fa-remove"></i>
-  </a>
-  <div class="w3-bar-block w3-center">
-    <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Home</a>
-    <a href="#huis" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Huis</a>
-    <a href="#omgeving" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Omgeving</a>
-    <a href="#beschikbaarheid" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Prijzen & Beschikbaarheid</a>
-    <a href="#boeken" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Boeken</a>
-    <a href="#beoordelingen" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Beoordelingen</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Contact</a>
-  </div>
-</nav>
+      <!-- Logo: swallow + wordmark -->
+      <a href="#home" class="flex items-center gap-2 group">
+        <img src="images/zwaluw.png" alt="" class="w-7 h-7 md:w-8 md:h-8 object-contain">
+        <span class="font-serif text-2xl md:text-3xl text-ink group-hover:text-clay-700 transition-colors">
+          Hirondelle
+        </span>
+      </a>
 
-<!-- Page Content -->
-<div class="w3-main w3-padding-large" style="margin-left:40%">
+      <!-- Desktop nav -->
+      <nav class="hidden md:flex items-center gap-8" aria-label="Hoofdnavigatie">
+        <a href="#huis" class="nav-link">Huis</a>
+        <a href="#omgeving" class="nav-link">Omgeving</a>
+        <a href="#beschikbaarheid" class="nav-link">Prijzen</a>
+        <a href="#beoordelingen" class="nav-link">Beoordelingen</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="#boeken" class="btn-primary !py-2 !px-5 text-sm">Boek nu</a>
+      </nav>
 
-  <!-- navigation bar -->
-  <div class="w3-hide-small" id="Navbar" style="background-color: #d0b3af;">
-    <div class="w3-opacity" style="display: flex;">
-      <a href="#" class="w3-bar-item w3-button" style="flex-grow: 1; display: flex; justify-content: center; align-items: center;">Home</a>
-      <a href="#huis" class="w3-bar-item w3-button" style="flex-grow: 1; display: flex; justify-content: center; align-items: center;">Huis</a>
-      <a href="#omgeving" class="w3-bar-item w3-button" style="flex-grow: 1; display: flex; justify-content: center; align-items: center;">Omgeving</a>
-      <a href="#beschikbaarheid" class="w3-bar-item w3-button" style="flex-grow: 1; display: flex; justify-content: center; align-items: center;">Prijzen &amp; Beschikbaarheid</a>
-      <a href="#boeken" class="w3-bar-item w3-button" style="flex-grow: 1; display: flex; justify-content: center; align-items: center;">Boeken</a>
-      <a href="#beoordelingen" class="w3-bar-item w3-button" style="flex-grow: 1; display: flex; justify-content: center; align-items: center;">Beoordelingen</a>
-      <a href="#contact" class="w3-bar-item w3-button" style="flex-grow: 1; display: flex; justify-content: center; align-items: center;">Contact</a>
-      <!-- <span class="w3-button w3-bar-item w3-xxlarge" style="width:auto; right: 0;" onclick="openNav()"><i class="fa fa-bars"></i></span> -->
-    </div>
-  </div>
+      <!-- Mobile hamburger -->
+      <button
+        id="menu-open"
+        type="button"
+        class="md:hidden inline-flex items-center justify-center w-10 h-10 text-ink hover:text-clay-700"
+        aria-label="Menu openen"
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="3" y1="7" x2="21" y2="7"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="17" x2="21" y2="17"></line>
+        </svg>
+      </button>
 
-
-  <!-- Menu icon to open sidebar -->
-  <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black w3-hide-large w3-hide-medium" style="width:auto;right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
-
-  <!--<span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" style="width:auto;right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span> -->
-
-  <!-- Header -->
-  <header class="w3-container w3-center" style="padding:25px 16px" id="home">
-    <h1 class="w3-jumbo w3-hide-small"><b>Vakantiehuis Hirondelle</b></h1>
-    <h1 class="w3-xxlarge w3-hide-large w3-hide-medium"><b>Vakantiehuis Hirondelle</b></h1>
-    <p class="w3-large">Lief 4 persoons vakantiehuis in het romantische Picardie nabij zee en krijtrotsen</p>
-    <img src="images/web_front_image.webp" class="w3-image w3-hide-large w3-hide-small w3-round" style="display:block;width:60%;margin:auto;">
-    <img src="images/web_front_image.webp" class="w3-image w3-hide-large w3-hide-medium w3-round" width="1000" height="1333">
-    <center><p class="w3-large w3-text-grey" style="max-width: 60%; font-style: italic">
-      Dit schattig vakantiehuis dateert uit ca. 1900. 
-      Het is gelegen in een fraai dal, in het dorpje Bouillancourt. 
-      Op een steenworp afstand van de kust, krijtrotsen en de baai van de Somme in Picardie.
-    </p></center>
-    <!--<button class="w3-button w3-light-grey w3-padding-large w3-margin-top">
-      <i class="fa fa-download"></i> Download Resume
-    </button>-->
-
-    <div class="image-container">
-      <img src="images/zwaluw.png" alt="Zwaluw">
     </div>
   </header>
 
-  <!-- Huis Section -->
-  <div class="w3-padding-32 w3-content" id="huis">
-    <h2 class="w3-text-grey">Huis</h2>
-    <hr class="w3-opacity">
-
-    <!-- Grid for photos -->
-    <div class="w3-row-padding" style="margin:0 -16px">
-      <div class="w3-half">
-        <img src="images/web_Front_yard_1.webp" style="width:100%">
-        <img src="images/web_Back_yard_1.webp" style="width:100%">
-        <img src="images/web_Back_yard_2.webp" style="width:100%">
-        <img src="images/web_Back_yard_3.webp" style="width:100%">
-      </div>
-
-      <div class="w3-half">
-        <img src="images/web_Bathroom.webp" style="width:100%">
-        <img src="images/web_Kitchen.webp" style="width:100%">
-        <img src="images/web_Attic.webp" style="width:100%">
-        <img src="images/web_Living_room.webp" style="width:100%">
-        <img src="images/web_Front_yard_2.webp" style="width:100%">
-      </div>
-    <!-- End photo grid -->
-    </div>
-
-    <h3 class="w3-text-grey">Details</h3>
-    <div class="w3-half">
-      <table class="w3-table w3-striped w3-white">
-        <tr>
-          <td><i class="fa fa-person w3-text-black w3-large"></i></td>
-          <td>4 personen</td>
-        </tr>
-        <tr>
-          <td><i class="fa fa-bed w3-text-black w3-large"></i></td>
-          <td>3 slaapkamers</td>
-        </tr>
-        <tr>
-          <td><i class="fa fa-bath w3-text-black w3-large"></i></td>
-          <td>1 badkamer</td>
-        </tr>
-        <tr>
-          <td><i class="fa fa-cutlery w3-text-black w3-large"></i></td>
-          <td>Volledig ingerichte keuken</td>
-        </tr>
-        <tr>
-          <td><i class="fa fa-wifi w3-text-black w3-large"></i></td>
-          <td>Wifi</td>
-        </tr>
-        <tr>
-          <td><i class="fa fa-ban-smoking w3-text-black w3-large"></i></td>
-          <td>Roken niet toegestaan</td>
-        </tr>
-      </table>
-    </div>
-    <div class="w3-half">
-      <table class="w3-table w3-striped w3-white">
-        <tr>
-          <td><i class="fa fa-house-chimney w3-text-black w3-large"></i></td>
-          <td>Vrijstaand met voor- en achtertuin</td>
-        </tr>
-        <tr>
-          <td><i class="fa fa-tv w3-text-black w3-large"></i></td>
-          <td>TV (kabel en satelliet)</td>
-        </tr>
-        <tr>
-          <td><i class="fa fa-fire w3-text-black w3-large"></i></td>
-          <td>Open haard</td>
-        </tr>
-        <tr>
-          <td><i class="fa fa-car w3-text-black w3-large"></i></td>
-          <td>Parkeerplaats aan straat</td>
-        </tr>
-        <tr>
-          <td><i class="fa fa-bicycle w3-text-black w3-large"></i></td>
-          <td>Fietsen</td>
-        </tr>
-        <tr>
-          <td><i class="fa fa-dog w3-text-black w3-large"></i></td>
-          <td>Huisdieren niet toegestaan</td>
-        </tr>
-      </table>
-    </div>
-
-    <h3 class="w3-text-grey" style="padding-top: 250px">Over dit huisje</h3>
-    Ontdek dit gezellige en stijlvol ingerichte vakantiehuisje in Bouillancourt, Picardie, Frankrijk. Hier geniet je van de landelijke sfeer, rust en Franse nostalgie. 
-    Het huis, verwarmd door elektrische kachels en haardvuur, biedt een oase van groen met speelse voor- en achtertuinen vol hazelnoot- en vlierbomen. Pluk verse pepermunt voor thee en ontdek rode besjes en frambozen in de tuin (voorjaar). 
-    Vanuit de openstaande ramen luister je in de tuin naar de langspeelplaat van Julien Clerc of andere chansonniers. De tuin biedt zowel schaduw als zon, terwijl de zolder een sfeervolle relax- en slaapruimte is, uitgerust met TV, radio, CD-speler, en goede WIFI. 
-    Het huis is ideaal voor liefhebbers van haardvuur, stilte, en ruimte. Geniet van satelliet-tv met vele buitenlandse zenders of gebruik Chromecast om Netflix of je favoriete tv-app van thuis te casten.
-      
-    </br><br> Bouillancourt is een klein rustig dorpje nabij Abbeville, St. Valery sur Somme, Crotoy en Ault (400 km vanaf Utrecht). Ca. 15 minuten rijden naar strand en krijtrotsen.
-
-    <!-- <button class="w3-button w3-light-grey w3-padding-large w3-section" onclick="toggleText('details', this)">Lees verder</button> -->
-
-    <h3 class="w3-text-grey" style="padding-top: 25px">Faciliteiten</h3>
-    <div class="grid-container">
-      <div class="grid-item-room tooltip"><span class="tooltiptext" style="bottom: 85px;">Matrasmaat 140 x 200 cm</span>Slaapkamer 1: <br/> 2-pers. bed (1x)</div>
-      <div class="grid-item-room tooltip"><span class="tooltiptext" style="bottom: 85px;">Matrasmaat 90 x 200 cm</span>Slaapkamer 2: <br/> 1-pers. bed (2x)</div>
-      <div class="grid-item-room tooltip"><span class="tooltiptext" style="bottom: 85px;">Matrasmaat 140 x 200 cm</span>Slaapkamer 3: <br/> 2-pers. bed (1x)</div>
-    </div>
-
-    <h4 class="w3-text-grey" style="padding-top: 25px">Basisvoorzieningen</h4>
-    <div class="grid-container">
-      <div class="grid-item"><i class="fa-regular fa-circle-check w3-text-black w3-medium"></i> Internettoegang (WIFI)</div>
-      <div class="grid-item"><i class="fa-regular fa-circle-check w3-text-black w3-medium"></i> Open haard</div>
-      <div class="grid-item"><i class="fa-regular fa-circle-check w3-text-black w3-medium"></i> Verwarming (elektisch)</div>
-      <div class="grid-item"><i class="fa-regular fa-circle-check w3-text-black w3-medium"></i> Berging</div>
-      <div class="grid-item"><i class="fa-regular fa-circle-check w3-text-black w3-medium"></i> Drinkbaar kraanwater</div>
-    </div>
-    
-    <h4 class="w3-text-grey" style="padding-top: 25px">Buiten</h4>
-    <div class="grid-container">
-      <div class="grid-item"><i class="fa-regular fa-circle-check w3-text-black w3-medium"></i> Tuin (omheind)</div>
-      <div class="grid-item"><i class="fa-regular fa-circle-check w3-text-black w3-medium"></i> Barbecue</div>
-      <div class="grid-item"><i class="fa-regular fa-circle-check w3-text-black w3-medium"></i> Tuinmeubilair</div>
-      <div class="grid-item"><i class="fa-regular fa-circle-check w3-text-black w3-medium"></i> Terras</div>
-      <div class="grid-item"><i class="fa-regular fa-circle-check w3-text-black w3-medium"></i> Binnenplaats</div>
-    </div>
-
-    <h4 class="w3-text-grey" style="padding-top: 25px">Entertainment</h4>
-    <div class="grid-container">
-      <div class="grid-item"><i class="fa-regular fa-circle-check w3-text-black w3-medium"></i> Tv</div>
-      <div class="grid-item"><i class="fa-regular fa-circle-check w3-text-black w3-medium"></i> Fietsen beschikbaar</div>
-      <div class="grid-item"><i class="fa-regular fa-circle-check w3-text-black w3-medium"></i> Platenspeler</div>
-      <div class="grid-item"><i class="fa-regular fa-circle-check w3-text-black w3-medium"></i> Boomhut, schommel</div>
-      <div class="grid-item"><i class="fa-regular fa-circle-check w3-text-black w3-medium"></i> Diverse kinderspeelgoed</div>
-      <div class="grid-item"><i class="fa-regular fa-circle-check w3-text-black w3-medium"></i> Gezelschapsspellen</div>
-    </div>
-
-
-    <h3 class="w3-text-grey" style="padding-top: 25px">Huisregels</h3>
-    <div>
-      <ul class="no-list">
-        <li>Minimum leeftijd hoofdboeker: 18 jaar.</li>
-        <li>Roken is niet toegestaan in dit natuurhuisje.</li>
-        <li>Vuurwerk afsteken is niet toegestaan.</li>
-        <li>Feesten of evenementen zijn niet toegestaan.</li>
-        <li>Dit huisje is niet geschikt voor groepen jongeren, studenten en sportteams.</li>
-      </ul>
-      <p>Aanvullende huisregels worden vermeld bij de algemene voorwaarden, bij het plaatsen van jouw boeking.</p>
-    </div>
-
-    <h3 class="w3-text-grey" style="padding-top: 25px">Ligging</h3>
-    <div id="map"></div>
-  </div>
-  <!-- End Huis Section -->
-
-  <!-- Omgeving Section -->
-
-  <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="omgeving">
-    <h2>Omgeving</h2>
-    <hr class="w3-opacity">
-    
-    <div class="gallery js-flickity"
-      data-flickity-options='{ "wrapAround": true }'>
-
-      <div class="gallery-cell">
-        <ul class="w3-ul w3-center w3-card w3-hover-shadow">
-          <li class="w3-xlarge w3-padding-32" style="background-color: #d0b3af;">Bouillancourt</li>
-          <li class="w3-padding-16"><img src="images/bouillancourt.jpg" width="264" height="160"></li>
-          <li class="w3-padding-16">
-            <span class="w3-opacity"><i class="fa fa-shop w3-text-black w3-large"></i> <i class="fa fa-cafe w3-text-black w3-large"></i> <i class="fa fa-tree w3-text-black w3-large"></i> <i class="fa fa-church w3-text-black w3-large"></i> <i class="fa fa-campground w3-text-black w3-large"></i></span>
-          </li>
-          <li class="w3-padding-16">
-            <a href="https://goo.gl/maps/tQHqKwvozh8Hko6F7" target="_blank">
-              <i class="fa fa-road w3-text-black w3-large"></i> Afstand 300 m
-            </a>
-          </li>
-          <li class="w3-padding-16 text-carrousel"><i class="fa fa-info w3-text-black w3-large"></i> Het historisch kerkje van Bouillancourt stamt uit 1519 en is opgebouwd uit locale materialen silex en Torchis (klei vermengd met mest). Niet te bezichtigen helaas. Er zijn maar weinig mensen die de sleutel hebben. In ieder geval de burgemeester.</li>
-        </ul>
-      </div>
-
-      <div class="gallery-cell">
-        <ul class="w3-ul w3-center w3-card w3-hover-shadow">
-          <li class="w3-xlarge w3-padding-32" style="background-color: #d0b3af;">Saint Valéry sur Somme</li>
-          <li class="w3-padding-16"><img src="images/valery_haven.jpg" width="264" height="160"></li>
-          <li class="w3-padding-16">
-            <span class="w3-opacity"><i class="fa fa-shop w3-text-black w3-large"></i> <i class="fa fa-cafe w3-text-black w3-large"></i> <i class="fa fa-bank w3-text-black w3-large"></i> <i class="fa fa-chess-rook w3-text-black w3-large"></i> <i class="fa fa-leaf w3-text-black w3-large"></i></span>
-          </li>
-          <li class="w3-padding-16">
-            <a href="https://goo.gl/maps/3ktY78p415GJLUsi8" target="_blank">
-              <i class="fa fa-road w3-text-black w3-large"></i> Afstand 19 km
-            </a>
-          </li>
-          <li class="w3-padding-16 text-carrousel"><i class="fa fa-info w3-text-black w3-large"></i> Valery sur Somme. Bedrijvig en gezellig stadje met vele bezienswaardigheden. Onder andere: middeleeuws gedeelte met botanische tuin, winkelstraat, VVV, diverse speciale winkels en supermarkten, wandelboulevard, haven, stoomtreintje.</li>
-        </ul>
-      </div>
-
-      <div class="gallery-cell">
-        <ul class="w3-ul w3-center w3-card w3-hover-shadow">
-          <li class="w3-xlarge w3-padding-32" style="background-color: #d0b3af;">Le Crotoy</li>
-          <li class="w3-padding-16"><img src="images/le_crotoy.jpg" width="264" height="160"></li>
-          <li class="w3-padding-16">
-            <span class="w3-opacity"><i class="fa fa-shop w3-text-black w3-large"></i> <i class="fa fa-cafe w3-text-black w3-large"></i> <i class="fa fa-bank w3-text-black w3-large"></i> <i class="fa fa-umbrella-beach w3-text-black w3-large"></i> <i class="fa fa-fish w3-text-black w3-large"></i></span>
-          </li>
-          <li class="w3-padding-16">
-            <a href="https://goo.gl/maps/di5EAADxzGUJqZ6q7" target="_blank">
-              <i class="fa fa-road w3-text-black w3-large"></i> Afstand 23 km
-            </a>
-          </li>
-          <li class="w3-padding-16 text-carrousel"><i class="fa fa-info w3-text-black w3-large"></i> Le Crotoy. De vele kleine vissershuisjes karakteriseren dit vissersdorp met haventje. Verder is hier veel te doen: in visgerechten gespecialiseerde restaurantjes, wandelboulevard, wandelen aan het water, wandelen op de drooggevallen baai (bij eb).</li>
-        </ul>
-      </div>
-
-      <div class="gallery-cell">
-        <ul class="w3-ul w3-center w3-card w3-hover-shadow">
-          <li class="w3-xlarge w3-padding-32" style="background-color: #d0b3af;">Abbeville</li>
-          <li class="w3-padding-16"><img src="images/abbeville.jpg" width="264" height="160"></li>
-          <li class="w3-padding-16">
-            <span class="w3-opacity"><i class="fa fa-shop w3-text-black w3-large"></i> <i class="fa fa-cafe w3-text-black w3-large"></i> <i class="fa fa-bank w3-text-black w3-large"></i> <i class="fa fa-church w3-text-black w3-large"></i> <i class="fa fa-store w3-text-black w3-large"></i></span>
-          </li>
-          <li class="w3-padding-16">
-            <a href="https://goo.gl/maps/v8An4ahwYZ73NSxv6" target="_blank">
-              <i class="fa fa-road w3-text-black w3-large"></i> Afstand 8 km
-            </a>
-          </li>
-          <li class="w3-padding-16 text-carrousel"><i class="fa fa-info w3-text-black w3-large"></i> Abbeville. Grootste en belangrijkste stad in de omgeving. Rondom de oude basiliek bevindt zich het stadshart. Naast kleine speciaalwinkels bevinden zich hier ook de grotere winkelketens om goed te kunnen shoppen. Rondom het centrum bevinden zich diverse karakteristieke straten waar de bouwstijl van vroeger nog goed zichtbaar is. Het treinstation van Abbeville biedt een uitstekende connectie met grote steden zoals Parijs (1:35min vanaf € 29,10 enkele reis).</li>
-        </ul>
-      </div>
-      
-    </div>
-  </div>
-
-  <!-- End Omgeving Section -->
-
-  <!-- Prijzen & beschikbaarheid -->
-  <div class="w3-padding-32 w3-content" id="beschikbaarheid">
-    <h2 class="w3-text-grey">Prijzen & beschikbaarheid</h2>
-    <hr class="w3-opacity">
-
-    <h3 class="w3-padding-16 w3-text-grey">Prijzen</h3>
-    <p>Huurprijs van zaterdag - zaterdag</p>
-    <table class="w3-table w3-striped w3-white">
-      <tr>
-        <th>Seizoen</th>
-        <th>Prijs</th>
-      </tr>
-      <tr>
-        <td class="tooltip"><span class="tooltiptext" style="bottom: 45px;">Zomervakantie</span>Hoogseizoen</td>
-        <td>€ 585,-</td>
-      </tr>
-      <tr>
-        <td class="tooltip"><span class="tooltiptext" style="bottom: 45px;">Mei, herfst, pasen, pinksteren, voorjaars - vakantie</span>Middenseizoen</td>
-        <td>€ 525,-</td>
-      </tr>
-      <tr>
-        <td class="tooltip"><span class="tooltiptext" style="bottom: 45px;">Overig</span>Laagseizoen</td>
-        <td>€ 495,-</td>
-      </tr>
-    </table>
-
-    <p class="w3-text-grey">* Bij de boeking komen de volgende kosten: € 150 borg, € 35 schoonmaakkosten (verplicht), € 20 basis energie (gas, water, elektriciteit), In de huur periode gebruikte Kwh tegen het dan geldende tarief</p>
-
-    <h3 class="w3-padding-16 w3-text-grey">Beschikbaarheid</h3>
-
-    <iframe src="https://embed.styledcalendar.com/#Mf738qogsDnvoh2kPJQn" title="Styled Calendar" class="styled-calendar-container" style="width: 100%; border: none;" data-cy="calendar-embed-iframe"></iframe>
-    <script async type="module" src="https://embed.styledcalendar.com/assets/parent-window.js"></script>
-
-  </div>
-  <!-- End Prijzen & beschikbaarheid -->
-
-  <!-- Boeken -->
-  <div class="w3-padding-32 w3-content" id="boeken">
-  <h2 class="w3-text-grey">Boeken</h2>
-  <hr class="w3-opacity">
-  
-  <form action="https://formspree.io/f/mgejeqka" method="POST">
-
-    <div class="w3-half">
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Naam" required name="Naam"></p>
-    </div>
-    <div class="w3-half">
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Achternaam" required name="Achternaam"></p>
-    </div>
-
-    <div class="w3-half">
-      <p><input class="w3-input w3-padding-16 w3-border" type="email" placeholder="Email" required name="Email"></p>
-    </div>
-    <div class="w3-half">
-      <p><input class="w3-input w3-padding-16 w3-border" type="tel" placeholder="Telefoon" required name="Telefoon" pattern="(^\+[0-9]{2}|^\+[0-9]{2}\(0\)|^\(\+[0-9]{2}\)\(0\)|^00[0-9]{2}|^0)([0-9]{9}$|[0-9\-\s]{10}$)"></p>
-    </div>
-
-    <div class="w3-half">
-      <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="Volwassenen" min="0" max="4" name="Volwassenen" id="adults"/></p>
-    </div>
-    <div class="w3-half">
-      <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="Kinderen" min="0" max="4" name="Kinderen" id="children"/></p>
-    </div>
-
-    <p><input class="w3-input w3-padding-16 w3-border" type="text" id="dateRangePicker" placeholder="Aankomst -> Vertrek" required name="datum"/></p>
-
-    <p><textarea class="w3-input w3-padding-16 w3-border" style="min-height: 100px; resize: vertical;" type="text" placeholder="* Extra notitie" name="Notitie" id="message2" rows="4" cols="50" maxlength="250"></textarea></p>
-    <div class="w3-padding-small w3-text-grey" id="count2"></div>
-    <p class="w3-text-grey"><input class="w3-padding-small" type="checkbox" required> * Ik ga akkoord met het verstekken van mijn gegevens. Deze gegevens zijn nodig om de boeking goed te kunnen verwerken. Deze gegevens worden niet voor andere doeleinden gebruikt.</p>
-    <p>
-      <button class="w3-button w3-light-grey w3-padding-large" type="submit">
-        <i class="fa fa-paper-plane"></i> Boeking versturen
+  <!-- Mobile menu overlay (hidden by default) -->
+  <div
+    id="mobile-menu"
+    class="fixed inset-0 z-50 bg-cream hidden flex-col"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Mobiel menu"
+  >
+    <div class="container-page flex items-center justify-between h-16 shrink-0 relative z-10">
+      <a href="#home" class="flex items-center gap-2" data-close-menu>
+        <img src="images/zwaluw.png" alt="" class="w-7 h-7 object-contain">
+        <span class="font-serif text-2xl text-ink">Hirondelle</span>
+      </a>
+      <button
+        id="menu-close"
+        type="button"
+        class="inline-flex items-center justify-center w-10 h-10 text-ink hover:text-clay-700"
+        aria-label="Menu sluiten"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+          <line x1="6" y1="18" x2="18" y2="6"></line>
+        </svg>
       </button>
-    </p>
-  </form>
-
-  </div>
-  <!-- End Boeken -->
-
-  <!-- Beoordelingen Section -->
-
-  <div class="w3-padding-32 w3-content" id="beoordelingen">
-    <h2 class="w3-text-grey">Beoordelingen</h2>
-    <p class="w3-text-grey">* Deze beoordelingen zijn afkomstig van de website van Natuurhuisje.nl</p>
-    <hr class="w3-opacity">
-
-    <div class="reviews-container">
-      <!-- Reviews will be added here manually -->
-      <div class="review">
-        <p>GJ de </br> 24 juni 2023 - 1 juli 2023</p>
-        <div><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
-        <p>
-          Prachtige natuur van verlerlei aard: Kust, velden met gewas, mooie dalen</br>
-          </br>
-          Algemene beoordeling: 8</br>
-          Het kwam eerst wat "vol" over qua inrichting, maar dat went snel. Het is verder comfortabel, van alles voorzien.
-        </p>
-      </div>
-
-      <div class="review">
-        <p>imkje </br> 3 september 2022 - 24 september 2022</p>
-        <div><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
-        <p>
-          Een rustig dorp met mooie zee en zand en kiezelstranden in de buurt,ook mooie oude stadjes</br>
-          </br>
-          Algemene beoordeling: 8</br>
-          Een comfortabel, echt Frans brocante huisje
-        </p>
-      </div>
-
-      <div class="review">
-        <p>Reinder </br> 28 mei 2022 - 4 juni 2022</p>
-        <div><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
-        <p>
-          Omgeving rond het huis is erg rustig. Je kunt hier heerlijk in de zon en in de schaduw in de tuin zitten. Je hoort veel vogels en de tuin is mooi onderhouden. Vanuit het huis hebben wij in de week dat wij hier waren 3 mooie wandelingen (1 grote en 2 kleine) kunnen maken. Een aanrader is om bijvoorbeeld in de buurt naar het plaatsje Saint-Valery-sur-Somme te gaan. Daar kun je veel bezichtigen en gezellig rondlopen en vanuit deze locatie kun je fietsen huren om een mooie tocht langs de kust en de krijtrotsen te maken.</br>
-          </br>
-          Algemene beoordeling: 9</br>
-          Het natuurhuisje is erg gezellig en karakteristiek ingericht. Het eten is goed te bereiden, je kunt ook lekker binnen zijn, badkamer is prima en we konden heerlijk rustig slapen.
-        </p>
-      </div>
-
-      <div class="review">
-        <p>Nicolien </br> 23 april 2022 - 30 april 2022</p>
-        <div><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star w3-text-grey"></i></div>
-        <p>
-          Het huisje is in een dorpje op het platteland, in een lieflijke vallei, met op rijafstand diverse boeiende landschappen (wetlands, Baie de Somme met zandbanken, krijtrotskliffen...) om te bezoeken. Een auto is wat dat betreft wel fijn.</br>
-          </br>
-          Algemene beoordeling: 8</br>
-          Een huisje met een sterke personal touch, heerlijk stukje tuin erbij, fijne haard en een vuurplaats in de tuin, complete, gezellige inrichting.
-        </p>
-      </div>
-
-      <div class="review">
-        <p>Michiel </br> 1 augustus 2020 - 15 augustus 2020</p>
-        <div><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star w3-text-grey"></i></div>
-        <p>
-          Het huisje ligt weliswaar niet direct in de natuur, maar in een klein, slaperig dorpje met daaromheen veel bossen, akkers en weilanden. Fraai wandelen en fietsen door het heuvelachtige landschap! De beek aan het eind van de straat is heerlijk om pootjebadend in af te koelen na een snikhete zomerdag.
-Klein minpuntje: de vele vroeg actieve hanen en blaffende waakhonden in de buurt.</br>
-          </br>
-          Algemene beoordeling: 9</br>
-          Heel fijn huisje met alle basics. Ruim genoeg voor een gezin van 4. Het ontbreken van wifi, wasmachine en vaatwasser kan als minpunt gezien worden, maar draagt daarentegen ook bij aan het vakantiegevoel. De voor- en achtertuin bieden meerdere plekken die voor elk moment van de dag geschikt zijn (of je nu zon of juist schaduw wilt).</br>
-          </br>
-          * Inmiddels is er wel wifi aanwezig
-        </p>
-      </div>
-
-      <div class="review">
-        <p>Ronald </br> 22 juni 2019 - 29 juni 2019</p>
-        <div><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star w3-text-grey"></i></div>
-        <p>
-          Prachtige rustige en groene omgeving. Glooiend dus uitdagend om te fietsen en te lopen.</br>
-          </br>
-          Algemene beoordeling: 8</br>
-          Knus huis met gezellige tuin
-        </p>
-      </div>
-
-      <!-- Add more reviews manually if needed -->
-    </div>
-    <div class="pagination" style="padding-top: 1%;">
-      <!-- Pagination links will be added here manually -->
-      <a href="#beoordelingen" class="w3-button w3-light-grey w3-padding-large" onclick="showPage(1)">1</a>
-      <a href="#beoordelingen" class="w3-button w3-light-grey w3-padding-large" onclick="showPage(2)">2</a>      
     </div>
 
+    <nav class="container-page flex-1 flex flex-col justify-center gap-6" aria-label="Mobiele navigatie">
+      <a href="#huis" class="font-serif text-4xl text-ink hover:text-clay-700" data-close-menu>Huis</a>
+      <a href="#omgeving" class="font-serif text-4xl text-ink hover:text-clay-700" data-close-menu>Omgeving</a>
+      <a href="#beschikbaarheid" class="font-serif text-4xl text-ink hover:text-clay-700" data-close-menu>Prijzen</a>
+      <a href="#beoordelingen" class="font-serif text-4xl text-ink hover:text-clay-700" data-close-menu>Beoordelingen</a>
+      <a href="#contact" class="font-serif text-4xl text-ink hover:text-clay-700" data-close-menu>Contact</a>
+      <a href="#boeken" class="btn-primary mt-6 self-start" data-close-menu>Boek nu</a>
+    </nav>
   </div>
 
-  <!-- End Beoordelingen Section -->
+  <main>
 
-  <!-- Contact Section -->
-  <div class="w3-padding-32 w3-content w3-text-grey" id="contact">
-    <h2>Contact</h2>
-    <hr class="w3-opacity">
+    <!-- ==========================================================
+         SECTION 3 — Hero
+         Full-bleed front-of-house image; nav floats over the top.
+         Title, tagline and CTAs centred over a cream gradient at
+         the bottom of the image. A 4-up "quick facts" strip sits
+         directly beneath.
+    =========================================================== -->
+    <section id="home" class="relative">
+      <div class="relative w-full h-[85vh] min-h-[560px] max-h-[900px] overflow-hidden">
+        <img
+          src="images/web_front_image.webp"
+          srcset="images/web_front_image_600.webp 600w, images/web_front_image_1000.webp 1000w, images/web_front_image.webp 1400w"
+          sizes="100vw"
+          alt="Voorkant van Vakantiehuis Hirondelle in Bouillancourt, Picardie"
+          class="w-full h-full object-cover"
+          width="1400" height="1867"
+          fetchpriority="high"
+        >
+        <!-- Cream gradient bottom → improves text legibility and ties hero into the page -->
+        <div class="absolute inset-0 bg-gradient-to-t from-cream via-cream/50 to-transparent"></div>
+        <!-- Soft top vignette so the translucent nav sits readably on light photos -->
+        <div class="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-cream/60 to-transparent"></div>
 
-    <div class="w3-section">
-      <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: <a href="mailto:co6060@gmail.com">Chris Oomes</a></p>
-    </div>
-   
-    <p>Stuur ons gerust een bericht voor vragen:</p>
-    <form action="https://formspree.io/f/mgejeqka" method="POST">
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Naam" required name="Naam"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Onderwerp" required name="Onderwerp"></p>
-      <p><textarea class="w3-input w3-padding-16 w3-border" style="min-height: 100px; resize: vertical;" type="text" placeholder="Bericht" required name="Bericht" id="message1" rows="4" cols="50" maxlength="250"></textarea></p>
-      <div class="w3-padding-small w3-text-grey" id="count1"></div>
-      <p>
-        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
-          <i class="fa fa-paper-plane"></i> Bericht versturen
-        </button>
+        <!-- Text content -->
+        <div class="absolute inset-x-0 bottom-0 pb-12 md:pb-20">
+          <div class="container-page text-center">
+            <p class="overline mb-4">Picardie · Frankrijk</p>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl mb-5">Vakantiehuis Hirondelle</h1>
+            <p class="text-lg md:text-xl text-ink/80 max-w-2xl mx-auto mb-8">
+              Lief 4 persoons vakantiehuis in het romantische Picardie, op 18 minuten van de kust en krijtrotsen.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-3 justify-center">
+              <a href="#boeken" class="btn-primary">Direct boeken</a>
+              <a href="#huis" class="btn-secondary">Bekijk het huis</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick facts strip -->
+      <div class="border-y border-border">
+        <div class="container-page">
+          <div class="grid grid-cols-2 md:grid-cols-4 py-10 md:py-14 gap-y-8">
+            <div class="text-center">
+              <p class="font-serif text-3xl md:text-4xl text-ink">4</p>
+              <p class="overline mt-2">Personen</p>
+            </div>
+            <div class="text-center">
+              <p class="font-serif text-3xl md:text-4xl text-ink">3</p>
+              <p class="overline mt-2">Slaapkamers</p>
+            </div>
+            <div class="text-center">
+              <p class="font-serif text-3xl md:text-4xl text-ink">18 min</p>
+              <p class="overline mt-2">Tot de kust</p>
+            </div>
+            <div class="text-center">
+              <p class="font-serif text-3xl md:text-4xl text-ink">vanaf €495</p>
+              <p class="overline mt-2">Per week</p>
+              <p class="text-xs text-muted mt-1">(laagseizoen)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         SECTION 4 — Welkom / verhaal
+         Desktop: two-column (copy left, sticky photo right).
+         Mobile: copy is broken into chunks with photos interleaved
+                 between them so the scroll has visual rhythm.
+         A small swallow divider separates the lead from the body.
+    =========================================================== -->
+    <section id="welkom" class="section">
+      <div class="container-page">
+        <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
+
+          <!-- Copy -->
+          <div>
+            <p class="overline mb-4">Welkom</p>
+            <h2 class="text-3xl md:text-5xl mb-8">Welkom in Bouillancourt</h2>
+
+            <!-- Italic lead -->
+            <p class="font-serif italic text-xl md:text-2xl text-ink leading-relaxed mb-8">
+              Dit schattig vakantiehuis dateert uit ca. 1900. Het is gelegen in een fraai dal, in het dorpje Bouillancourt — op een steenworp afstand van de kust, de krijtrotsen en de baai van de Somme.
+            </p>
+
+            <!-- Mobile-only swallow divider between lead and body -->
+            <div class="md:hidden flex items-center gap-4 my-10" aria-hidden="true">
+              <div class="flex-1 h-px bg-border"></div>
+              <img src="images/zwaluw.png" alt="" class="w-7 opacity-50">
+              <div class="flex-1 h-px bg-border"></div>
+            </div>
+
+            <!-- First text chunk -->
+            <div class="space-y-5 text-base md:text-lg text-muted">
+              <p>
+                Ontdek dit gezellige en stijlvol ingerichte vakantiehuisje in Picardie, Frankrijk. Hier geniet je van de landelijke sfeer, rust en Franse nostalgie.
+              </p>
+              <p>
+                Het huis wordt verwarmd door elektrische kachels en haardvuur, en biedt een oase van groen met speelse voor- en achtertuinen vol hazelnoot- en vlierbomen. Pluk verse pepermunt voor thee en ontdek rode besjes en frambozen in de tuin in het voorjaar.
+              </p>
+            </div>
+
+            <!-- Mobile-only photo break (cozy interior) -->
+            <figure class="md:hidden my-10">
+              <img
+                src="images/web_Living_room.webp"
+                alt="Woonkamer met open haard"
+                class="w-full aspect-[4/3] object-cover rounded-lg shadow-sm"
+                loading="lazy"
+              >
+              <figcaption class="mt-2 text-xs text-muted text-center italic">De woonkamer met open haard</figcaption>
+            </figure>
+
+            <!-- Second text chunk -->
+            <div class="space-y-5 text-base md:text-lg text-muted">
+              <p>
+                Vanuit de openstaande ramen luister je in de tuin naar de langspeelplaat van Julien Clerc of andere chansonniers. De tuin biedt zowel schaduw als zon, terwijl de zolder een sfeervolle relax- en slaapruimte is, uitgerust met TV, radio, CD-speler en goede wifi.
+              </p>
+              <p>
+                Het huis is ideaal voor liefhebbers van haardvuur, stilte en ruimte. Geniet van satelliet-tv met vele buitenlandse zenders of gebruik Chromecast om Netflix of je favoriete tv-app van thuis te casten.
+              </p>
+            </div>
+
+            <!-- Mobile-only photo break (garden) -->
+            <figure class="md:hidden my-10">
+              <img
+                src="images/web_Back_yard_1.webp"
+                alt="Achtertuin met terras"
+                class="w-full aspect-[4/3] object-cover rounded-lg shadow-sm"
+                loading="lazy"
+              >
+              <figcaption class="mt-2 text-xs text-muted text-center italic">De achtertuin in het voorjaar</figcaption>
+            </figure>
+
+            <!-- Third text chunk (location) -->
+            <div class="space-y-5 text-base md:text-lg text-muted">
+              <p>
+                Bouillancourt is een klein rustig dorpje nabij Abbeville, Saint Valéry sur Somme, Le Crotoy en Ault — circa 400 km vanaf Utrecht en ongeveer 18 minuten rijden naar de kust en de krijtrotsen.
+              </p>
+            </div>
+          </div>
+
+          <!-- Photo (desktop only — sticky so it follows the eye while reading) -->
+          <div class="hidden md:block md:sticky md:top-28">
+            <img
+              src="images/web_Front_yard_1.webp"
+              alt="Voortuin van Vakantiehuis Hirondelle met groen en bloemen"
+              class="w-full aspect-[4/5] object-cover rounded-lg shadow-sm"
+              loading="lazy"
+            >
+          </div>
+
+        </div>
+
+        <!-- Swallow flourish at the bottom (desktop + mobile) -->
+        <div class="mt-20 md:mt-28 text-center">
+          <img src="images/zwaluw.png" alt="" class="inline-block w-12 opacity-60">
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         SECTION 5 — Het Huis (gallery + details)
+         Photo mosaic, then property details (icon grid),
+         bedrooms (3 cards), then collapsible facilities.
+    =========================================================== -->
+    <section id="huis" class="section border-t border-border">
+      <div class="container-page">
+
+        <!-- Section header -->
+        <div class="max-w-2xl mb-12 md:mb-16">
+          <p class="overline mb-3">Het Huis</p>
+          <h2 class="text-3xl md:text-5xl mb-4">Een blik binnen en buiten</h2>
+          <p class="text-base md:text-lg text-muted">
+            Negen foto's geven je een eerlijk beeld van het huis, de kamers en de tuin. Klik op een foto voor een groter beeld.
+          </p>
+        </div>
+
+        <!-- ── Gallery: uniform grid ── -->
+        <div id="gallery-wrap" class="grid grid-cols-2 lg:grid-cols-3 gap-1.5">
+
+          <button class="gallery-item block overflow-hidden rounded-md group" data-index="0" aria-label="Voortuin">
+            <img src="images/web_Front_yard_1.webp" alt="Voortuin van het vakantiehuis" loading="lazy" width="800" height="600" class="w-full aspect-[4/3] object-cover transition-opacity duration-200 group-hover:opacity-80">
+          </button>
+          <button class="gallery-item block overflow-hidden rounded-md group" data-index="1" aria-label="Woonkamer">
+            <img src="images/web_Living_room.webp" alt="Woonkamer met open haard" loading="lazy" width="800" height="600" class="w-full aspect-[4/3] object-cover transition-opacity duration-200 group-hover:opacity-80">
+          </button>
+          <button class="gallery-item block overflow-hidden rounded-md group" data-index="2" aria-label="Achtertuin">
+            <img src="images/web_Back_yard_1.webp" alt="Achtertuin met terras" loading="lazy" width="800" height="600" class="w-full aspect-[4/3] object-cover transition-opacity duration-200 group-hover:opacity-80">
+          </button>
+          <button class="gallery-item block overflow-hidden rounded-md group" data-index="3" aria-label="Keuken">
+            <img src="images/web_Kitchen.webp" alt="Volledig ingerichte keuken" loading="lazy" width="800" height="600" class="w-full aspect-[4/3] object-cover transition-opacity duration-200 group-hover:opacity-80">
+          </button>
+          <button class="gallery-item block overflow-hidden rounded-md group" data-index="4" aria-label="Zolder">
+            <img src="images/web_Attic.webp" alt="Sfeervolle zolder" loading="lazy" width="800" height="600" class="w-full aspect-[4/3] object-cover transition-opacity duration-200 group-hover:opacity-80">
+          </button>
+          <button class="gallery-item block overflow-hidden rounded-md group" data-index="5" aria-label="Achtertuin 2">
+            <img src="images/web_Back_yard_2.webp" alt="Achtertuin met tuinmeubilair" loading="lazy" width="800" height="600" class="w-full aspect-[4/3] object-cover transition-opacity duration-200 group-hover:opacity-80">
+          </button>
+          <button class="gallery-item block overflow-hidden rounded-md group" data-index="6" aria-label="Badkamer">
+            <img src="images/web_Bathroom.webp" alt="Badkamer" loading="lazy" width="800" height="600" class="w-full aspect-[4/3] object-cover transition-opacity duration-200 group-hover:opacity-80">
+          </button>
+          <button class="gallery-item block overflow-hidden rounded-md group" data-index="7" aria-label="Voortuin 2">
+            <img src="images/web_Front_yard_2.webp" alt="Voortuin met zitplek" loading="lazy" width="800" height="600" class="w-full aspect-[4/3] object-cover transition-opacity duration-200 group-hover:opacity-80">
+          </button>
+          <button class="gallery-item block overflow-hidden rounded-md group" data-index="8" aria-label="Achtertuin 3">
+            <img src="images/web_Back_yard_3.webp" alt="Achtertuin in het groen" loading="lazy" width="800" height="600" class="w-full aspect-[4/3] object-cover transition-opacity duration-200 group-hover:opacity-80">
+          </button>
+          <button class="gallery-item block overflow-hidden rounded-md group" data-index="9" aria-label="Voorkant huis">
+            <img src="images/web_front_image.webp" alt="Voorkant vakantiehuis Hirondelle" loading="lazy" width="800" height="600" class="w-full aspect-[4/3] object-cover transition-opacity duration-200 group-hover:opacity-80">
+          </button>
+
+        </div>
+
+        <!-- Lightbox modal -->
+        <div
+          id="lightbox"
+          class="hidden fixed inset-0 z-[100] bg-ink/90 backdrop-blur-sm flex items-center justify-center p-4"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Foto weergeven"
+        >
+          <!-- Close -->
+          <button
+            id="lb-close"
+            class="absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors duration-200"
+            aria-label="Sluiten"
+          >
+            <i class="fa-solid fa-xmark text-base"></i>
+          </button>
+
+          <!-- Prev -->
+          <button
+            id="lb-prev"
+            class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors duration-200"
+            aria-label="Vorige foto"
+          >
+            <i class="fa-solid fa-chevron-left text-sm"></i>
+          </button>
+
+          <!-- Next -->
+          <button
+            id="lb-next"
+            class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors duration-200"
+            aria-label="Volgende foto"
+          >
+            <i class="fa-solid fa-chevron-right text-sm"></i>
+          </button>
+
+          <!-- Image -->
+          <figure class="flex flex-col items-center gap-3 max-w-4xl w-full">
+            <img
+              id="lb-img"
+              src="" alt=""
+              class="max-h-[82vh] max-w-full object-contain rounded-xl shadow-2xl"
+              width="1000" height="750"
+            >
+            <div class="flex items-center gap-4">
+              <figcaption id="lb-caption" class="text-white/70 text-sm italic font-serif"></figcaption>
+              <span class="text-white/30 text-xs">·</span>
+              <p id="lb-counter" class="text-white/40 text-xs tracking-widest font-sans"></p>
+            </div>
+          </figure>
+        </div>
+
+        <!-- Property details: icon grid -->
+        <div class="mt-20 md:mt-28">
+          <h3 class="text-2xl md:text-3xl mb-8">Details</h3>
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-px bg-border">
+            <div class="flex items-center gap-3 p-4 bg-cream">
+              <span class="w-9 h-9 rounded-full bg-clay-100 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-person text-clay-700 text-sm"></i>
+              </span>
+              <span class="text-sm">4 personen</span>
+            </div>
+            <div class="flex items-center gap-3 p-4 bg-cream">
+              <span class="w-9 h-9 rounded-full bg-clay-100 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-bed text-clay-700 text-sm"></i>
+              </span>
+              <span class="text-sm">3 slaapkamers</span>
+            </div>
+            <div class="flex items-center gap-3 p-4 bg-cream">
+              <span class="w-9 h-9 rounded-full bg-clay-100 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-bath text-clay-700 text-sm"></i>
+              </span>
+              <span class="text-sm">1 badkamer</span>
+            </div>
+            <div class="flex items-center gap-3 p-4 bg-cream">
+              <span class="w-9 h-9 rounded-full bg-clay-100 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-utensils text-clay-700 text-sm"></i>
+              </span>
+              <span class="text-sm">Volledig ingerichte keuken</span>
+            </div>
+            <div class="flex items-center gap-3 p-4 bg-cream">
+              <span class="w-9 h-9 rounded-full bg-clay-100 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-wifi text-clay-700 text-sm"></i>
+              </span>
+              <span class="text-sm">Wifi</span>
+            </div>
+            <div class="flex items-center gap-3 p-4 bg-cream">
+              <span class="w-9 h-9 rounded-full bg-clay-100 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-fire text-clay-700 text-sm"></i>
+              </span>
+              <span class="text-sm">Open haard</span>
+            </div>
+            <div class="flex items-center gap-3 p-4 bg-cream">
+              <span class="w-9 h-9 rounded-full bg-clay-100 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-tv text-clay-700 text-sm"></i>
+              </span>
+              <span class="text-sm">TV (kabel + satelliet)</span>
+            </div>
+            <div class="flex items-center gap-3 p-4 bg-cream">
+              <span class="w-9 h-9 rounded-full bg-clay-100 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-house-chimney text-clay-700 text-sm"></i>
+              </span>
+              <span class="text-sm">Vrijstaand met voor- &amp; achtertuin</span>
+            </div>
+            <div class="flex items-center gap-3 p-4 bg-cream">
+              <span class="w-9 h-9 rounded-full bg-clay-100 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-car text-clay-700 text-sm"></i>
+              </span>
+              <span class="text-sm">Parkeerplaats aan straat</span>
+            </div>
+            <div class="flex items-center gap-3 p-4 bg-cream">
+              <span class="w-9 h-9 rounded-full bg-clay-100 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-bicycle text-clay-700 text-sm"></i>
+              </span>
+              <span class="text-sm">Fietsen beschikbaar</span>
+            </div>
+            <div class="flex items-center gap-3 p-4 bg-cream">
+              <span class="w-9 h-9 rounded-full bg-clay-100 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-ban-smoking text-clay-700 text-sm"></i>
+              </span>
+              <span class="text-sm">Roken niet toegestaan</span>
+            </div>
+            <div class="flex items-center gap-3 p-4 bg-cream">
+              <span class="w-9 h-9 rounded-full bg-clay-100 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-dog text-clay-700 text-sm"></i>
+              </span>
+              <span class="text-sm">Huisdieren niet toegestaan</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bedrooms -->
+        <div class="mt-20 md:mt-28">
+          <h3 class="text-2xl md:text-3xl mb-8">Slaapkamers</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="p-6 bg-white border border-border rounded-lg">
+              <p class="overline mb-3">Slaapkamer 1</p>
+              <p class="font-serif text-2xl text-ink mb-2">2-persoonsbed</p>
+              <p class="text-sm text-muted">Matras 140 × 200 cm</p>
+            </div>
+            <div class="p-6 bg-white border border-border rounded-lg">
+              <p class="overline mb-3">Slaapkamer 2</p>
+              <p class="font-serif text-2xl text-ink mb-2">2× 1-persoonsbed</p>
+              <p class="text-sm text-muted">Matras 90 × 200 cm</p>
+            </div>
+            <div class="p-6 bg-white border border-border rounded-lg">
+              <p class="overline mb-3">Slaapkamer 3</p>
+              <p class="font-serif text-2xl text-ink mb-2">2-persoonsbed</p>
+              <p class="text-sm text-muted">Matras 140 × 200 cm</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Facilities (open by default, collapsible) -->
+        <div class="mt-20 md:mt-28">
+          <details class="group border-t border-border pt-8" open>
+            <summary class="flex items-center justify-between cursor-pointer list-none mb-10">
+              <h3 class="text-2xl md:text-3xl">Alle voorzieningen</h3>
+              <span class="flex items-center gap-2 text-sm font-sans font-medium text-clay-900">
+                <span class="group-open:hidden">Bekijk alles</span>
+                <span class="hidden group-open:inline">Inklappen</span>
+                <i class="fa-solid fa-chevron-down transition-transform duration-300 group-open:rotate-180"></i>
+              </span>
+            </summary>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div>
+              <h4 class="font-serif text-xl mb-4">Basisvoorzieningen</h4>
+              <ul class="space-y-2 text-base">
+                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-clay-700 mt-1.5 text-sm"></i> Internettoegang (wifi)</li>
+                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-clay-700 mt-1.5 text-sm"></i> Open haard</li>
+                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-clay-700 mt-1.5 text-sm"></i> Verwarming (elektrisch)</li>
+                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-clay-700 mt-1.5 text-sm"></i> Berging</li>
+                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-clay-700 mt-1.5 text-sm"></i> Drinkbaar kraanwater</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-serif text-xl mb-4">Buiten</h4>
+              <ul class="space-y-2 text-base">
+                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-clay-700 mt-1.5 text-sm"></i> Tuin (omheind)</li>
+                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-clay-700 mt-1.5 text-sm"></i> Barbecue</li>
+                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-clay-700 mt-1.5 text-sm"></i> Tuinmeubilair</li>
+                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-clay-700 mt-1.5 text-sm"></i> Terras</li>
+                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-clay-700 mt-1.5 text-sm"></i> Binnenplaats</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-serif text-xl mb-4">Entertainment</h4>
+              <ul class="space-y-2 text-base">
+                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-clay-700 mt-1.5 text-sm"></i> Tv (kabel + satelliet, Chromecast)</li>
+                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-clay-700 mt-1.5 text-sm"></i> Fietsen beschikbaar</li>
+                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-clay-700 mt-1.5 text-sm"></i> Platenspeler</li>
+                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-clay-700 mt-1.5 text-sm"></i> Boomhut &amp; schommel</li>
+                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-clay-700 mt-1.5 text-sm"></i> Diverse kinderspeelgoed</li>
+                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-clay-700 mt-1.5 text-sm"></i> Gezelschapsspellen</li>
+              </ul>
+            </div>
+          </div>
+          </details>
+        </div>
+
+        <!-- Huisregels -->
+        <div class="mt-20 md:mt-28">
+          <h3 class="text-2xl md:text-3xl mb-6">Huisregels</h3>
+          <ul class="space-y-3 text-base text-muted max-w-2xl">
+            <li class="flex items-start gap-3"><i class="fa-solid fa-circle text-clay-300 text-[6px] mt-2.5"></i> Minimum leeftijd hoofdboeker: 18 jaar.</li>
+            <li class="flex items-start gap-3"><i class="fa-solid fa-circle text-clay-300 text-[6px] mt-2.5"></i> Roken is niet toegestaan in dit huisje.</li>
+            <li class="flex items-start gap-3"><i class="fa-solid fa-circle text-clay-300 text-[6px] mt-2.5"></i> Vuurwerk afsteken is niet toegestaan.</li>
+            <li class="flex items-start gap-3"><i class="fa-solid fa-circle text-clay-300 text-[6px] mt-2.5"></i> Feesten of evenementen zijn niet toegestaan.</li>
+            <li class="flex items-start gap-3"><i class="fa-solid fa-circle text-clay-300 text-[6px] mt-2.5"></i> Niet geschikt voor groepen jongeren, studenten of sportteams.</li>
+          </ul>
+          <p class="text-sm text-muted mt-4 max-w-2xl">
+            Aanvullende huisregels vind je in de algemene voorwaarden bij het plaatsen van je boeking.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         SECTION 6 — De Omgeving
+         4 area cards + Leaflet map
+    =========================================================== -->
+    <section id="omgeving" class="section border-t border-border">
+      <div class="container-page">
+
+        <!-- Section header -->
+        <div class="max-w-2xl mb-12 md:mb-16">
+          <p class="overline mb-3">De Omgeving</p>
+          <h2 class="text-3xl md:text-5xl mb-4">Wat is er te doen?</h2>
+          <p class="text-base md:text-lg text-muted">
+            Bouillancourt ligt centraal tussen zee, krijtrotsen en gezellige stadjes. Alles binnen een kwartiertje rijden.
+          </p>
+        </div>
+
+        <!-- Area cards: 1 col mobile → 2 cols tablet → 4 cols desktop -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          <!-- Bouillancourt -->
+          <div class="bg-white border border-border rounded-xl overflow-hidden flex flex-col">
+            <div class="overflow-hidden">
+              <img src="images/bouillancourt.webp" alt="Kerk van Bouillancourt" loading="lazy" width="264" height="160"
+                class="w-full aspect-[5/3] object-cover transition-transform duration-300 hover:scale-105">
+            </div>
+            <div class="p-5 flex flex-col flex-1">
+              <div class="flex items-start justify-between gap-2 mb-3">
+                <h3 class="font-serif text-xl leading-snug">Bouillancourt</h3>
+                <span class="shrink-0 text-xs font-medium bg-clay-100 text-clay-900 px-2.5 py-1 rounded-full">300 m</span>
+              </div>
+              <p class="text-sm text-muted leading-relaxed flex-1">
+                Het historisch kerkje stamt uit 1519, opgebouwd uit lokale materialen silex en torchis. Een rustig dorpje midden in het groene Picardische dal.
+              </p>
+              <a href="https://goo.gl/maps/tQHqKwvozh8Hko6F7" target="_blank" rel="noopener"
+                class="btn-secondary mt-5 text-sm !py-2 !px-4 self-start">
+                <i class="fa-solid fa-location-dot text-xs"></i> Bekijk op kaart
+              </a>
+            </div>
+          </div>
+
+          <!-- Saint Valéry sur Somme -->
+          <div class="bg-white border border-border rounded-xl overflow-hidden flex flex-col">
+            <div class="overflow-hidden">
+              <img src="images/valery_haven.jpg" alt="Haven van Saint Valéry sur Somme" loading="lazy" width="264" height="160"
+                class="w-full aspect-[5/3] object-cover transition-transform duration-300 hover:scale-105">
+            </div>
+            <div class="p-5 flex flex-col flex-1">
+              <div class="flex items-start justify-between gap-2 mb-3">
+                <h3 class="font-serif text-xl leading-snug">Saint Valéry sur Somme</h3>
+                <span class="shrink-0 text-xs font-medium bg-clay-100 text-clay-900 px-2.5 py-1 rounded-full">19 km</span>
+              </div>
+              <p class="text-sm text-muted leading-relaxed flex-1">
+                Bedrijvig stadje met middeleeuws gedeelte, wandelboulevard, haven, stoomtreintje en een botanische tuin. Gezellig voor een dagje uit.
+              </p>
+              <a href="https://goo.gl/maps/3ktY78p415GJLUsi8" target="_blank" rel="noopener"
+                class="btn-secondary mt-5 text-sm !py-2 !px-4 self-start">
+                <i class="fa-solid fa-location-dot text-xs"></i> Bekijk op kaart
+              </a>
+            </div>
+          </div>
+
+          <!-- Le Crotoy -->
+          <div class="bg-white border border-border rounded-xl overflow-hidden flex flex-col">
+            <div class="overflow-hidden">
+              <img src="images/le_crotoy.webp" alt="Le Crotoy vissersdorp" loading="lazy" width="264" height="160"
+                class="w-full aspect-[5/3] object-cover transition-transform duration-300 hover:scale-105">
+            </div>
+            <div class="p-5 flex flex-col flex-1">
+              <div class="flex items-start justify-between gap-2 mb-3">
+                <h3 class="font-serif text-xl leading-snug">Le Crotoy</h3>
+                <span class="shrink-0 text-xs font-medium bg-clay-100 text-clay-900 px-2.5 py-1 rounded-full">23 km</span>
+              </div>
+              <p class="text-sm text-muted leading-relaxed flex-1">
+                Charmant vissersdorp met kleurrijke vissershuisjes, een haventje, restaurantjes gespecialiseerd in vis en wandelen op de drooggevallen baai bij eb.
+              </p>
+              <a href="https://goo.gl/maps/di5EAADxzGUJqZ6q7" target="_blank" rel="noopener"
+                class="btn-secondary mt-5 text-sm !py-2 !px-4 self-start">
+                <i class="fa-solid fa-location-dot text-xs"></i> Bekijk op kaart
+              </a>
+            </div>
+          </div>
+
+          <!-- Abbeville -->
+          <div class="bg-white border border-border rounded-xl overflow-hidden flex flex-col">
+            <div class="overflow-hidden">
+              <img src="images/abbeville.webp" alt="Abbeville stadscentrum" loading="lazy" width="264" height="160"
+                class="w-full aspect-[5/3] object-cover transition-transform duration-300 hover:scale-105">
+            </div>
+            <div class="p-5 flex flex-col flex-1">
+              <div class="flex items-start justify-between gap-2 mb-3">
+                <h3 class="font-serif text-xl leading-snug">Abbeville</h3>
+                <span class="shrink-0 text-xs font-medium bg-clay-100 text-clay-900 px-2.5 py-1 rounded-full">8 km</span>
+              </div>
+              <p class="text-sm text-muted leading-relaxed flex-1">
+                Grootste stad in de omgeving, rondom een oude basiliek. Winkels, markten en karakteristieke straten. Trein naar Parijs in 1u35 vanaf €29.
+              </p>
+              <a href="https://goo.gl/maps/v8An4ahwYZ73NSxv6" target="_blank" rel="noopener"
+                class="btn-secondary mt-5 text-sm !py-2 !px-4 self-start">
+                <i class="fa-solid fa-location-dot text-xs"></i> Bekijk op kaart
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Leaflet map -->
+        <div class="mt-16 md:mt-20">
+          <div id="map" class="w-full rounded-xl border border-border" style="height: 380px;"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         SECTION 7 — Beoordelingen
+    =========================================================== -->
+    <section id="beoordelingen" class="section border-t border-border">
+      <div class="container-page">
+        <p class="overline mb-4">Ervaringen</p>
+        <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-4">
+          <h2 class="text-3xl md:text-5xl">Wat gasten zeggen</h2>
+          <div class="flex items-center gap-4 text-muted text-sm shrink-0">
+            <span class="font-serif text-5xl text-ink leading-none">8.3</span>
+            <div>
+              <div class="flex gap-0.5 text-clay-700 mb-1">
+                <i class="fa-solid fa-star text-sm"></i><i class="fa-solid fa-star text-sm"></i><i class="fa-solid fa-star text-sm"></i><i class="fa-solid fa-star text-sm"></i><i class="fa-regular fa-star text-sm"></i>
+              </div>
+              <p class="text-xs">Gebaseerd op 6 beoordelingen</p>
+            </div>
+          </div>
+        </div>
+        <div class="h-px bg-border mb-10 md:mb-16"></div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="reviews-grid">
+          <!-- Rendered by reviews.js from reviews.json -->
+        </div>
+
+        <!-- Toggle -->
+        <div class="mt-8 text-center">
+          <button id="reviews-toggle" type="button" class="btn-secondary text-sm gap-2">
+            Toon alle beoordelingen
+            <i class="fa-solid fa-chevron-down text-xs transition-transform duration-200" id="reviews-chevron"></i>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         SECTION 8 — Prijzen & Beschikbaarheid
+    =========================================================== -->
+    <section id="beschikbaarheid" class="section border-t border-border">
+      <div class="container-page">
+        <p class="overline mb-4">Tarieven</p>
+        <h2 class="text-3xl md:text-5xl mb-4">Prijzen &amp; Beschikbaarheid</h2>
+        <div class="h-px bg-border mb-10 md:mb-16"></div>
+
+        <!-- Season price timeline: horizontal connector style -->
+        <div class="overflow-x-auto -mx-6 px-6 md:overflow-visible md:mx-0 md:px-0 mb-12">
+          <div id="price-timeline" class="flex min-w-[520px] md:min-w-0">
+
+            <!-- Col 1: Laag Jan–Mrt — label ABOVE -->
+            <div class="timeline-seg group flex flex-col items-center cursor-pointer" style="flex:3">
+              <div class="flex flex-col items-center justify-end text-center" style="height:88px">
+                <p class="font-serif text-2xl text-ink transition-colors duration-200 group-hover:text-clay-700">€&nbsp;495</p>
+                <p class="text-xs font-semibold text-ink mt-1 transition-colors duration-200 group-hover:text-clay-700">Laagseizoen</p>
+                <p class="text-xs text-muted">Jan – Mrt</p>
+                <div class="w-px bg-border mt-2 transition-colors duration-200 group-hover:bg-clay-300" style="height:20px"></div>
+              </div>
+              <div class="w-full bg-clay-100 flex items-center justify-center rounded-l-full transition-all duration-300 group-hover:scale-y-[1.08] group-hover:shadow-[0_0_20px_rgba(208,179,175,0.6)]" style="height:40px">
+                <div class="w-3 h-3 bg-cream border-2 border-clay-300 rotate-45 shrink-0 transition-transform duration-300 group-hover:scale-[1.3]"></div>
+              </div>
+              <div style="height:88px"></div>
+            </div>
+
+            <!-- Col 2: Midden Apr–Mei — label BELOW -->
+            <div class="timeline-seg group flex flex-col items-center cursor-pointer" style="flex:2">
+              <div style="height:88px"></div>
+              <div class="w-full bg-clay-300 flex items-center justify-center transition-all duration-300 group-hover:scale-y-[1.08] group-hover:shadow-[0_0_20px_rgba(184,140,130,0.5)]" style="height:40px">
+                <div class="w-3 h-3 bg-cream border-2 border-clay-500 rotate-45 shrink-0 transition-transform duration-300 group-hover:scale-[1.3]"></div>
+              </div>
+              <div class="flex flex-col items-center justify-start text-center" style="height:88px">
+                <div class="w-px bg-border mb-2 transition-colors duration-200 group-hover:bg-clay-500" style="height:20px"></div>
+                <p class="font-serif text-2xl text-ink transition-colors duration-200 group-hover:text-clay-700">€&nbsp;525</p>
+                <p class="text-xs font-semibold text-ink mt-1 transition-colors duration-200 group-hover:text-clay-700">Middenseizoen</p>
+                <p class="text-xs text-muted">Apr – Mei</p>
+              </div>
+            </div>
+
+            <!-- Col 3: Hoog Jun–Aug — label ABOVE -->
+            <div class="timeline-seg group flex flex-col items-center cursor-pointer" style="flex:3">
+              <div class="flex flex-col items-center justify-end text-center" style="height:88px">
+                <p class="font-serif text-2xl text-clay-900 transition-colors duration-200 group-hover:text-clay-700">€&nbsp;585</p>
+                <p class="text-xs font-semibold text-clay-900 mt-1 transition-colors duration-200 group-hover:text-clay-700">Hoogseizoen</p>
+                <p class="text-xs text-muted">Jun – Aug</p>
+                <div class="w-px bg-border mt-2 transition-colors duration-200 group-hover:bg-clay-700" style="height:20px"></div>
+              </div>
+              <div class="w-full bg-clay-700 flex items-center justify-center transition-all duration-300 group-hover:scale-y-[1.08] group-hover:shadow-[0_0_24px_rgba(168,117,103,0.6)]" style="height:40px">
+                <div class="w-3 h-3 bg-cream border-2 border-clay-900 rotate-45 shrink-0 transition-transform duration-300 group-hover:scale-[1.3]"></div>
+              </div>
+              <div style="height:88px"></div>
+            </div>
+
+            <!-- Col 4: Midden Sep–Nov — label BELOW -->
+            <div class="timeline-seg group flex flex-col items-center cursor-pointer" style="flex:3">
+              <div style="height:88px"></div>
+              <div class="w-full bg-clay-300 flex items-center justify-center transition-all duration-300 group-hover:scale-y-[1.08] group-hover:shadow-[0_0_20px_rgba(184,140,130,0.5)]" style="height:40px">
+                <div class="w-3 h-3 bg-cream border-2 border-clay-500 rotate-45 shrink-0 transition-transform duration-300 group-hover:scale-[1.3]"></div>
+              </div>
+              <div class="flex flex-col items-center justify-start text-center" style="height:88px">
+                <div class="w-px bg-border mb-2 transition-colors duration-200 group-hover:bg-clay-500" style="height:20px"></div>
+                <p class="font-serif text-2xl text-ink transition-colors duration-200 group-hover:text-clay-700">€&nbsp;525</p>
+                <p class="text-xs font-semibold text-ink mt-1 transition-colors duration-200 group-hover:text-clay-700">Middenseizoen</p>
+                <p class="text-xs text-muted">Sep – Nov</p>
+              </div>
+            </div>
+
+            <!-- Col 5: Laag Dec — label ABOVE (compact) -->
+            <div class="timeline-seg group flex flex-col items-center cursor-pointer" style="flex:1">
+              <div class="flex flex-col items-center justify-end text-center" style="height:88px">
+                <p class="font-serif text-lg text-ink transition-colors duration-200 group-hover:text-clay-700">€&nbsp;495</p>
+                <p class="text-[10px] font-semibold text-ink mt-1 leading-tight transition-colors duration-200 group-hover:text-clay-700">Laag</p>
+                <p class="text-[10px] text-muted">Dec</p>
+                <div class="w-px bg-border mt-2 transition-colors duration-200 group-hover:bg-clay-300" style="height:20px"></div>
+              </div>
+              <div class="w-full bg-clay-100 flex items-center justify-center rounded-r-full transition-all duration-300 group-hover:scale-y-[1.08] group-hover:shadow-[0_0_20px_rgba(208,179,175,0.6)]" style="height:40px">
+                <div class="w-3 h-3 bg-cream border-2 border-clay-300 rotate-45 shrink-0 transition-transform duration-300 group-hover:scale-[1.3]"></div>
+              </div>
+              <div style="height:88px"></div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Extra costs: icon cards -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-12">
+          <div class="bg-white border border-border rounded-lg p-4 flex flex-col gap-1">
+            <i class="fa-solid fa-shield-halved text-clay-300"></i>
+            <p class="font-serif text-2xl text-ink mt-2">€&nbsp;150</p>
+            <p class="text-xs font-semibold text-ink">Borg</p>
+            <p class="text-xs text-muted leading-relaxed">Terugbetaald na verblijf</p>
+          </div>
+          <div class="bg-white border border-border rounded-lg p-4 flex flex-col gap-1">
+            <i class="fa-solid fa-broom text-clay-300"></i>
+            <p class="font-serif text-2xl text-ink mt-2">€&nbsp;35</p>
+            <p class="text-xs font-semibold text-ink">Schoonmaak</p>
+            <p class="text-xs text-muted leading-relaxed">Verplicht bij boeking</p>
+          </div>
+          <div class="bg-white border border-border rounded-lg p-4 flex flex-col gap-1">
+            <i class="fa-solid fa-bolt text-clay-300"></i>
+            <p class="font-serif text-2xl text-ink mt-2">€&nbsp;20 <span class="text-base text-muted">+ kWh</span></p>
+            <p class="text-xs font-semibold text-ink">Energie</p>
+            <p class="text-xs text-muted leading-relaxed">Basis (gas, water, elektriciteit) + verbruikte kWh tegen geldend tarief</p>
+          </div>
+        </div>
+        <p class="text-xs text-muted -mt-8 mb-12">Huurperiode van zaterdag tot zaterdag.</p>
+
+        <!-- Calendar — full width -->
+        <div>
+          <p class="font-medium text-ink mb-4">Controleer beschikbaarheid</p>
+          <div class="rounded-2xl border border-border overflow-hidden shadow-sm">
+            <iframe
+              src="https://embed.styledcalendar.com/#Mf738qogsDnvoh2kPJQn"
+              title="Beschikbaarheidskalender Hirondelle"
+              class="w-full"
+              style="height: 520px; border: none;"
+              scrolling="no"
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         SECTION 9 — Boeken
+    =========================================================== -->
+    <section id="boeken" class="section border-t border-border">
+      <div class="container-page">
+        <p class="overline mb-4">Reservering</p>
+        <h2 class="text-3xl md:text-5xl mb-2">Reserveer je verblijf</h2>
+        <p class="text-muted mb-4">Vul het formulier in en we nemen contact op.</p>
+        <div class="h-px bg-border mb-10 md:mb-16"></div>
+
+        <div class="max-w-2xl">
+          <form action="https://formspree.io/f/mgejeqka" method="POST" class="space-y-5">
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="b-naam" class="block text-xs font-semibold uppercase tracking-overline text-muted mb-1.5">Naam <span class="text-clay-700">*</span></label>
+                <input id="b-naam" name="naam" type="text" required autocomplete="given-name"
+                  class="w-full bg-white border border-border rounded-md px-4 py-3 text-ink text-sm focus:outline-none focus:ring-2 focus:ring-clay-700 focus:border-transparent transition">
+              </div>
+              <div>
+                <label for="b-achternaam" class="block text-xs font-semibold uppercase tracking-overline text-muted mb-1.5">Achternaam <span class="text-clay-700">*</span></label>
+                <input id="b-achternaam" name="achternaam" type="text" required autocomplete="family-name"
+                  class="w-full bg-white border border-border rounded-md px-4 py-3 text-ink text-sm focus:outline-none focus:ring-2 focus:ring-clay-700 focus:border-transparent transition">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="b-email" class="block text-xs font-semibold uppercase tracking-overline text-muted mb-1.5">Email <span class="text-clay-700">*</span></label>
+                <input id="b-email" name="email" type="email" required autocomplete="email"
+                  class="w-full bg-white border border-border rounded-md px-4 py-3 text-ink text-sm focus:outline-none focus:ring-2 focus:ring-clay-700 focus:border-transparent transition">
+              </div>
+              <div>
+                <label for="b-telefoon" class="block text-xs font-semibold uppercase tracking-overline text-muted mb-1.5">Telefoon <span class="text-clay-700">*</span></label>
+                <input id="b-telefoon" name="telefoon" type="tel" required autocomplete="tel"
+                  class="w-full bg-white border border-border rounded-md px-4 py-3 text-ink text-sm focus:outline-none focus:ring-2 focus:ring-clay-700 focus:border-transparent transition">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <label for="b-volwassenen" class="block text-xs font-semibold uppercase tracking-overline text-muted mb-1.5">Volwassenen</label>
+                <input id="b-volwassenen" name="volwassenen" type="number" min="1" max="4" value="2"
+                  class="w-full bg-white border border-border rounded-md px-4 py-3 text-ink text-sm focus:outline-none focus:ring-2 focus:ring-clay-700 focus:border-transparent transition">
+              </div>
+              <div>
+                <label for="b-kinderen" class="block text-xs font-semibold uppercase tracking-overline text-muted mb-1.5">Kinderen</label>
+                <input id="b-kinderen" name="kinderen" type="number" min="0" max="4" value="0"
+                  class="w-full bg-white border border-border rounded-md px-4 py-3 text-ink text-sm focus:outline-none focus:ring-2 focus:ring-clay-700 focus:border-transparent transition">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="b-aankomst" class="block text-xs font-semibold uppercase tracking-overline text-muted mb-1.5">Aankomst <span class="text-clay-700">*</span></label>
+                <input id="b-aankomst" name="aankomst" type="date" required
+                  class="w-full bg-white border border-border rounded-md px-4 py-3 text-ink text-sm focus:outline-none focus:ring-2 focus:ring-clay-700 focus:border-transparent transition">
+              </div>
+              <div>
+                <label for="b-vertrek" class="block text-xs font-semibold uppercase tracking-overline text-muted mb-1.5">Vertrek <span class="text-clay-700">*</span></label>
+                <input id="b-vertrek" name="vertrek" type="date" required
+                  class="w-full bg-white border border-border rounded-md px-4 py-3 text-ink text-sm focus:outline-none focus:ring-2 focus:ring-clay-700 focus:border-transparent transition">
+              </div>
+            </div>
+
+            <div>
+              <label for="b-notitie" class="block text-xs font-semibold uppercase tracking-overline text-muted mb-1.5">Notitie</label>
+              <textarea id="b-notitie" name="notitie" rows="4" maxlength="250" placeholder="Vragen of opmerkingen?"
+                class="w-full bg-white border border-border rounded-md px-4 py-3 text-ink text-sm resize-none focus:outline-none focus:ring-2 focus:ring-clay-700 focus:border-transparent transition"></textarea>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <input id="b-akkoord" name="akkoord" type="checkbox" required
+                class="mt-1 w-4 h-4 rounded border-border accent-clay-700 shrink-0">
+              <label for="b-akkoord" class="text-sm text-muted leading-relaxed">
+                Ik ga akkoord met het verstrekken van mijn gegevens. Deze gegevens zijn nodig om de boeking goed te kunnen verwerken en worden niet voor andere doeleinden gebruikt.
+              </label>
+            </div>
+
+            <button type="submit" class="btn-primary w-full sm:w-auto">
+              Verstuur aanvraag <i class="fa-solid fa-arrow-right text-xs"></i>
+            </button>
+
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         SECTION 10 — Contact
+    =========================================================== -->
+    <section id="contact" class="section border-t border-border bg-white">
+      <div class="container-page">
+        <p class="overline mb-4">Vragen?</p>
+        <h2 class="text-3xl md:text-5xl mb-4">Neem contact op</h2>
+        <div class="h-px bg-border mb-10 md:mb-16"></div>
+
+        <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
+
+          <!-- Contact info -->
+          <div class="space-y-7">
+            <div class="flex items-start gap-4">
+              <span class="w-10 h-10 rounded-full bg-clay-100 flex items-center justify-center shrink-0 mt-0.5">
+                <i class="fa-solid fa-envelope text-clay-700 text-sm"></i>
+              </span>
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-overline text-muted mb-1">Email</p>
+                <a href="mailto:co6060@gmail.com" class="text-ink hover:text-clay-700 font-medium">co6060@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <span class="w-10 h-10 rounded-full bg-clay-100 flex items-center justify-center shrink-0 mt-0.5">
+                <i class="fa-solid fa-location-dot text-clay-700 text-sm"></i>
+              </span>
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-overline text-muted mb-1">Adres</p>
+                <p class="text-ink">Bouillancourt-Moyenneville, Frankrijk</p>
+                <p class="text-muted text-sm">Hauts-de-France, Picardie</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <span class="w-10 h-10 rounded-full bg-clay-100 flex items-center justify-center shrink-0 mt-0.5">
+                <i class="fa-brands fa-instagram text-clay-700 text-sm"></i>
+              </span>
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-overline text-muted mb-1">Volg ons</p>
+                <a href="https://www.instagram.com/fermette_hirondelles" target="_blank" rel="noopener" class="text-ink hover:text-clay-700">@fermette_hirondelles</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact form -->
+          <form action="https://formspree.io/f/mgejeqka" method="POST" class="space-y-4">
+
+            <div>
+              <label for="c-naam" class="block text-xs font-semibold uppercase tracking-overline text-muted mb-1.5">Naam <span class="text-clay-700">*</span></label>
+              <input id="c-naam" name="naam" type="text" required
+                class="w-full bg-cream border border-border rounded-md px-4 py-3 text-ink text-sm focus:outline-none focus:ring-2 focus:ring-clay-700 focus:border-transparent transition">
+            </div>
+            <div>
+              <label for="c-email" class="block text-xs font-semibold uppercase tracking-overline text-muted mb-1.5">Email <span class="text-clay-700">*</span></label>
+              <input id="c-email" name="email" type="email" required
+                class="w-full bg-cream border border-border rounded-md px-4 py-3 text-ink text-sm focus:outline-none focus:ring-2 focus:ring-clay-700 focus:border-transparent transition">
+            </div>
+            <div>
+              <label for="c-onderwerp" class="block text-xs font-semibold uppercase tracking-overline text-muted mb-1.5">Onderwerp <span class="text-clay-700">*</span></label>
+              <input id="c-onderwerp" name="onderwerp" type="text" required
+                class="w-full bg-cream border border-border rounded-md px-4 py-3 text-ink text-sm focus:outline-none focus:ring-2 focus:ring-clay-700 focus:border-transparent transition">
+            </div>
+            <div>
+              <label for="c-bericht" class="block text-xs font-semibold uppercase tracking-overline text-muted mb-1.5">Bericht <span class="text-clay-700">*</span></label>
+              <textarea id="c-bericht" name="bericht" rows="4" required maxlength="250"
+                class="w-full bg-cream border border-border rounded-md px-4 py-3 text-ink text-sm resize-none focus:outline-none focus:ring-2 focus:ring-clay-700 focus:border-transparent transition"></textarea>
+            </div>
+            <button type="submit" class="btn-primary w-full sm:w-auto">
+              Stuur bericht <i class="fa-solid fa-arrow-right text-xs"></i>
+            </button>
+
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================
+       SECTION 11 — Footer
+  =========================================================== -->
+  <footer class="bg-ink py-12">
+    <div class="container-page flex flex-col items-center gap-6">
+
+      <a href="#home" class="flex items-center gap-2 group">
+        <img src="images/zwaluw.png" alt="" class="w-6 h-6 object-contain opacity-50 group-hover:opacity-80 transition">
+        <span class="font-serif text-2xl text-cream/80 group-hover:text-cream transition">Hirondelle</span>
+      </a>
+
+      <div class="flex items-center gap-4">
+        <a href="https://www.instagram.com/fermette_hirondelles" target="_blank" rel="noopener" aria-label="Instagram"
+          class="w-9 h-9 flex items-center justify-center rounded-full border border-cream/20 text-cream/50 hover:text-cream hover:border-cream/50 transition">
+          <i class="fa-brands fa-instagram text-sm"></i>
+        </a>
+        <a href="https://www.facebook.com/fermette.hirondelles" target="_blank" rel="noopener" aria-label="Facebook"
+          class="w-9 h-9 flex items-center justify-center rounded-full border border-cream/20 text-cream/50 hover:text-cream hover:border-cream/50 transition">
+          <i class="fa-brands fa-facebook-f text-sm"></i>
+        </a>
+      </div>
+
+      <p class="text-xs text-cream/30 text-center">
+        © <span id="current-year"></span> Vakantiehuis Hirondelle ·
+        <script>
+          document.getElementById('current-year').textContent = new Date().getFullYear();
+        </script>
+        <a href="https://shanoomes.nl/" target="_blank" rel="noopener" class="hover:text-cream/60 transition">Powered by Shan</a>
       </p>
-    </form>
-  <!-- End Contact Section -->
-  </div>
 
-  <!-- Socials  Section -->
-  <div class="w3-padding-32 w3-content" style="margin-bottom:400px">
-    <h2>Socials</h2>
-    <hr class="w3-opacity" style="padding: 6px;">
-    <div class="w3-half">
-      <a href="https://www.instagram.com/fermette_hirondelles" target="_blank" style="display: flex; justify-content: center; align-items: center;">
-        <img src="images/frame_insta.png" style="width:60%">
-      </a>
     </div>
-    <div class="w3-half">
-      <a href="https://www.facebook.com/fermette.hirondelles" target="_blank" style="display: flex; justify-content: center; align-items: center;">
-        <img src="images/frame_facebook.png" style="width:60%">
-      </a>
-    </div>
-  </div>
-  <!-- End Socials Section-->
-
-
-
-  <!-- Footer -->
-  <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin:-24px">
-    <a href="https://www.facebook.com/fermette.hirondelles" target="_blank"><i class="fa-brands fa-square-facebook w3-hover-opacity"></i></a>
-    <a href="https://www.instagram.com/fermette_hirondelles" target="_blank"><i class="fa-brands fa-instagram w3-hover-opacity"></i></a>
-    <p class="w3-medium">Powered by <a href="https://shanoomes.nl/" target="_blank" class="w3-hover-text-green">Shan</a></p>
-  <!-- End footer -->
   </footer>
-  
-<!-- END PAGE CONTENT -->
-</div>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 
-<script src="javasript/all.js"></script>
+  <!-- Tiny JS for mobile menu open/close -->
+  <script>
+    (function () {
+      const openBtn  = document.getElementById('menu-open');
+      const closeBtn = document.getElementById('menu-close');
+      const menu     = document.getElementById('mobile-menu');
+
+      function openMenu() {
+        menu.classList.remove('hidden');
+        menu.classList.add('flex');
+        openBtn.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeMenu() {
+        menu.classList.add('hidden');
+        menu.classList.remove('flex');
+        openBtn.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+
+      openBtn.addEventListener('click', openMenu);
+      closeBtn.addEventListener('click', closeMenu);
+      // Close when any nav link inside the overlay is tapped
+      menu.querySelectorAll('[data-close-menu]').forEach(el => {
+        el.addEventListener('click', closeMenu);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !menu.classList.contains('hidden')) closeMenu();
+      });
+    })();
+  </script>
+
+  <!-- Leaflet JS + map init -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script>
+    window.addEventListener('load', function () {
+      const mapEl = document.getElementById('map');
+      if (!mapEl || typeof L === 'undefined') return;
+
+      const lat = 50.0517, lng = 1.7083;
+
+      const map = L.map('map', { scrollWheelZoom: false }).setView([lat, lng], 13);
+
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+        attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a>',
+        subdomains: 'abcd',
+        maxZoom: 19,
+      }).addTo(map);
+
+      const icon = L.divIcon({
+        className: '',
+        html: '<div style="width:14px;height:14px;background:#A87567;border:2px solid #fff;border-radius:50%;box-shadow:0 1px 4px rgba(0,0,0,.3)"></div>',
+        iconSize: [14, 14],
+        iconAnchor: [7, 7],
+      });
+
+      L.marker([lat, lng], { icon })
+        .addTo(map)
+        .bindPopup('<strong>Vakantiehuis Hirondelle</strong><br>Bouillancourt, Picardie')
+        .openPopup();
+    });
+  </script>
+
+  <!-- Price timeline animation -->
+  <script>
+    (function () {
+      const timeline = document.getElementById('price-timeline');
+      if (!timeline) return;
+      const segs = timeline.querySelectorAll('.timeline-seg');
+      segs.forEach(function (seg, i) {
+        seg.style.opacity = '0';
+        seg.style.animation = 'tlRise 0.45s cubic-bezier(0.22,1,0.36,1) ' + (i * 90) + 'ms both paused';
+      });
+      new IntersectionObserver(function (entries, obs) {
+        if (!entries[0].isIntersecting) return;
+        segs.forEach(function (seg) {
+          seg.style.animationPlayState = 'running';
+        });
+        obs.disconnect();
+      }, { threshold: 0.3 }).observe(timeline);
+    })();
+  </script>
+
+  <!-- Reviews: fetch reviews.json, render cards, toggle extra ones -->
+  <script>
+    (function () {
+      const INITIAL = 3;
+      const grid    = document.getElementById('reviews-grid');
+      const toggle  = document.getElementById('reviews-toggle');
+      const chevron = document.getElementById('reviews-chevron');
+      let expanded  = false;
+
+      function stars(count) {
+        let html = '';
+        for (let i = 1; i <= 5; i++) {
+          const cls = i <= count ? 'fa-solid fa-star' : 'fa-regular fa-star';
+          html += `<i class="${cls} text-xs"></i>`;
+        }
+        return html;
+      }
+
+      function card(review, hidden) {
+        const el = document.createElement('article');
+        el.className = 'bg-white border border-border rounded-lg p-6' + (hidden ? ' hidden' : '');
+        if (hidden) el.dataset.extraReview = '';
+        el.innerHTML = `
+          <div class="flex items-start justify-between gap-4 mb-3">
+            <div>
+              <p class="font-medium text-ink">${review.name}</p>
+              <p class="text-xs text-muted mt-0.5">${review.period}</p>
+            </div>
+            <span class="shrink-0 inline-flex items-center bg-clay-100 text-clay-900 text-sm font-semibold px-2.5 py-1 rounded-md">${review.score}</span>
+          </div>
+          <div class="flex gap-0.5 text-clay-700 mb-4">${stars(review.stars)}</div>
+          <p class="text-sm text-muted italic mb-2">
+            <i class="fa-solid fa-map-pin text-clay-300 mr-1.5 text-xs"></i>${review.location}
+          </p>
+          <p class="text-sm text-muted italic">
+            <i class="fa-solid fa-house text-clay-300 mr-1.5 text-xs"></i>${review.house}
+          </p>`;
+        return el;
+      }
+
+      fetch('reviews.json')
+        .then(r => r.json())
+        .then(function (reviews) {
+          grid.innerHTML = '';
+          reviews.forEach(function (review, i) {
+            grid.appendChild(card(review, i >= INITIAL));
+          });
+
+          toggle.addEventListener('click', function () {
+            expanded = !expanded;
+            grid.querySelectorAll('[data-extra-review]').forEach(el => {
+              el.classList.toggle('hidden', !expanded);
+            });
+            toggle.childNodes[0].textContent = expanded
+              ? 'Minder beoordelingen '
+              : 'Toon alle beoordelingen ';
+            chevron.style.transform = expanded ? 'rotate(180deg)' : '';
+          });
+        })
+        .catch(function () {
+          grid.innerHTML = '<p class="text-muted text-sm col-span-2">Beoordelingen konden niet worden geladen.</p>';
+          toggle.style.display = 'none';
+        });
+    })();
+  </script>
+
+  <!-- Gallery lightbox -->
+  <script>
+    (function () {
+      const images = [
+        { src: 'images/web_Front_yard_1.webp', alt: 'Voortuin van het vakantiehuis',    caption: 'Voortuin' },
+        { src: 'images/web_Living_room.webp',  alt: 'Woonkamer met open haard',         caption: 'Woonkamer' },
+        { src: 'images/web_Back_yard_1.webp',  alt: 'Achtertuin met terras',            caption: 'Achtertuin' },
+        { src: 'images/web_Kitchen.webp',      alt: 'Volledig ingerichte keuken',       caption: 'Keuken' },
+        { src: 'images/web_Attic.webp',        alt: 'Sfeervolle zolder',                caption: 'Zolder' },
+        { src: 'images/web_Back_yard_2.webp',  alt: 'Achtertuin met tuinmeubilair',     caption: 'Achtertuin (2)' },
+        { src: 'images/web_Bathroom.webp',     alt: 'Badkamer',                         caption: 'Badkamer' },
+        { src: 'images/web_Front_yard_2.webp', alt: 'Voortuin met zitplek',             caption: 'Voortuin (2)' },
+        { src: 'images/web_Back_yard_3.webp',  alt: 'Achtertuin in groen',              caption: 'Achtertuin (3)' },
+        { src: 'images/web_front_image.webp',  alt: 'Voorkant vakantiehuis Hirondelle', caption: 'Voorkant huis' },
+      ];
+
+      let current = 0;
+
+      const lb        = document.getElementById('lightbox');
+      const lbImg     = document.getElementById('lb-img');
+      const lbCap     = document.getElementById('lb-caption');
+      const lbCounter = document.getElementById('lb-counter');
+
+      function render() {
+        const { src, alt, caption } = images[current];
+        lbImg.src = src;
+        lbImg.alt = alt;
+        lbCap.textContent = caption;
+        lbCounter.textContent = `${current + 1} / ${images.length}`;
+      }
+
+      function open(index) {
+        current = index;
+        render();
+        lb.classList.remove('hidden');
+        lb.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function close() {
+        lb.classList.add('hidden');
+        lb.classList.remove('flex');
+        document.body.style.overflow = '';
+      }
+
+      function go(dir) {
+        current = (current + dir + images.length) % images.length;
+        render();
+      }
+
+      document.querySelectorAll('.gallery-item').forEach(btn =>
+        btn.addEventListener('click', () => open(Number(btn.dataset.index)))
+      );
+
+      document.getElementById('lb-close').addEventListener('click', close);
+      document.getElementById('lb-prev').addEventListener('click', () => go(-1));
+      document.getElementById('lb-next').addEventListener('click', () => go(1));
+      lb.addEventListener('click', e => { if (e.target === lb) close(); });
+
+      document.addEventListener('keydown', e => {
+        if (lb.classList.contains('hidden')) return;
+        if (e.key === 'Escape')     close();
+        if (e.key === 'ArrowLeft')  go(-1);
+        if (e.key === 'ArrowRight') go(1);
+      });
+
+      let touchX = null;
+      lb.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, { passive: true });
+      lb.addEventListener('touchend', e => {
+        if (touchX === null) return;
+        const dx = e.changedTouches[0].clientX - touchX;
+        if (Math.abs(dx) > 50) go(dx < 0 ? 1 : -1);
+        touchX = null;
+      }, { passive: true });
+    })();
+  </script>
+
 
 </body>
 </html>

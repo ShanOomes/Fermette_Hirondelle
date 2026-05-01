@@ -1,0 +1,50 @@
+[
+  {
+    "name": "GJ de",
+    "period": "24 juni – 1 juli 2023",
+    "stars": 5,
+    "score": "8/10",
+    "location": "Prachtige natuur van velerlei aard: kust, velden met gewas, mooie dalen.",
+    "house": "Het kwam eerst wat \"vol\" over qua inrichting, maar dat went snel. Het is verder comfortabel, van alles voorzien."
+  },
+  {
+    "name": "Imkje",
+    "period": "3 – 24 september 2022",
+    "stars": 5,
+    "score": "8/10",
+    "location": "Een rustig dorp met mooie zee en zand- en kiezelstranden in de buurt, ook mooie oude stadjes.",
+    "house": "Een comfortabel, echt Frans brocante huisje."
+  },
+  {
+    "name": "Reinder",
+    "period": "28 mei – 4 juni 2022",
+    "stars": 5,
+    "score": "9/10",
+    "location": "Omgeving is erg rustig. Vanuit het huis mooie wandelingen gemaakt — een aanrader is Saint-Valery-sur-Somme om te fietsen langs kust en krijtrotsen.",
+    "house": "Het huisje is erg gezellig en karakteristiek ingericht. Het eten is goed te bereiden, badkamer is prima en we konden heerlijk rustig slapen."
+  },
+  {
+    "name": "Nicolien",
+    "period": "23 – 30 april 2022",
+    "stars": 4,
+    "score": "8/10",
+    "location": "In een lieflijke vallei, met op rijafstand diverse boeiende landschappen: wetlands, Baie de Somme, krijtrotskliffen. Een auto is wat dat betreft fijn.",
+    "house": "Een huisje met een sterke personal touch, heerlijk stukje tuin erbij, fijne haard en een vuurplaats in de tuin, complete gezellige inrichting."
+  },
+  {
+    "name": "Michiel",
+    "period": "1 – 15 augustus 2020",
+    "stars": 4,
+    "score": "9/10",
+    "location": "In een klein, slaperig dorpje met veel bossen, akkers en weilanden. Fraai wandelen en fietsen door het heuvelachtige landschap!",
+    "house": "Heel fijn huisje met alle basics. Ruim genoeg voor een gezin van 4. De voor- en achtertuin bieden meerdere plekken die voor elk moment van de dag geschikt zijn."
+  },
+  {
+    "name": "Ronald",
+    "period": "22 – 29 juni 2019",
+    "stars": 4,
+    "score": "8/10",
+    "location": "Prachtige rustige en groene omgeving. Glooiend dus uitdagend om te fietsen en te lopen.",
+    "house": "Knus huis met gezellige tuin."
+  }
+]
